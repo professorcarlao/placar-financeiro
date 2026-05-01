@@ -1,5 +1,4 @@
-import { CalendarClock, CreditCard, Film, Home, ShoppingCart, Target, Wallet } from "lucide-react";
-import carlao from "@/assets/professor-carlao.png";
+import { Bell, CalendarClock, CreditCard, Film, Home, ShoppingCart, Target, Wallet } from "lucide-react";
 
 const card = "rounded-xl border border-linha/10 bg-campo-2-flat p-3";
 
@@ -89,15 +88,15 @@ export const MiniParcelamentoCard = () => (
 
 export const MiniAlertaCarlaoCard = () => (
   <div className={card}>
-    <div className="flex items-start gap-2">
-      <img src={carlao} alt="Carlão" className="h-8 w-8 shrink-0 rounded-full bg-apito/15 object-contain" />
-      <div className="rounded-lg rounded-bl-sm bg-campo-3-flat p-1.5">
-        <p className="text-[10px] leading-tight text-linha">
-          <span className="text-apito">"</span>Assinatura esquecida também faz gol contra.
-          <span className="text-apito">"</span>
-        </p>
-      </div>
+    <div className="mb-1.5 flex items-center gap-1.5">
+      <span className="flex h-5 w-5 items-center justify-center rounded-md bg-apito text-campo">
+        <Bell className="h-3 w-3" />
+      </span>
+      <p className="text-[9px] font-bold uppercase tracking-wider text-apito">Aviso do Carlão</p>
     </div>
+    <p className="text-[10px] leading-snug text-linha/85">
+      <span className="text-apito">"</span>Assinatura esquecida também faz gol contra.<span className="text-apito">"</span>
+    </p>
   </div>
 );
 
