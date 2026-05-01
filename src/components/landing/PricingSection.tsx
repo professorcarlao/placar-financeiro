@@ -1,19 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, Trophy } from "lucide-react";
+import { ArrowRight, CreditCard, LayoutDashboard, Sparkles } from "lucide-react";
 
-const free = [
-  "Placar do Mês básico",
-  "Registro manual simples",
-  "Categorias inteligentes",
-  "Visão inicial das metas",
-];
-
-const premium = [
-  "Histórico completo mês a mês",
-  "Relatórios visuais",
-  "Metas avançadas",
-  "Alertas do Carlão",
-  "Melhorias contínuas",
+const cards = [
+  {
+    icon: CreditCard,
+    title: "Entre sem cartão",
+    desc: "Crie sua conta gratuita e comece pelo básico.",
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Veja o Placar do Mês",
+    desc: "Entenda quanto entrou, quanto saiu e quanto ainda dá para jogar no mês.",
+  },
+  {
+    icon: Sparkles,
+    title: "Explore os recursos por dentro",
+    desc: "Metas, gastos fixos, assinaturas e parcelamentos aparecem no app conforme você organiza seu jogo.",
+  },
 ];
 
 export const PricingSection = () => {
@@ -25,85 +28,42 @@ export const PricingSection = () => {
             Entrar em campo
           </span>
           <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl lg:text-6xl">
-            Comece grátis.
+            Crie sua conta grátis e veja
             <br />
-            Evolua quando fizer sentido.
+            seu <span className="text-apito-deep">placar por dentro</span>.
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A conta gratuita serve pra você conhecer o app e começar a enxergar seu mês com clareza.
+          <p className="mt-5 text-lg text-muted-foreground">
+            Você não precisa decidir nada agora. Entre no app, veja o Placar do Mês, registre seus primeiros lances e entenda se o jeito do Carlão combina com sua rotina.
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-5xl items-stretch gap-6 lg:grid-cols-[1.1fr_1fr]">
-          {/* Free — destacado */}
-          <div className="relative rounded-3xl border-2 border-apito bg-card p-8 shadow-apito">
-            <span className="absolute -top-3 left-8 rounded-full bg-apito-gradient px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-campo">
-              Comece por aqui
-            </span>
-            <p className="font-display text-2xl text-campo">Conta grátis</p>
-            <div className="mt-2 flex items-baseline gap-2">
-              <span className="font-display text-6xl text-campo">R$ 0</span>
-              <span className="text-sm text-muted-foreground">/ pra sempre</span>
-            </div>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Ideal pra começar, organizar o mês e ver o seu primeiro placar.
-            </p>
-
-            <Button asChild variant="apito" size="xl" className="mt-6 w-full rounded-full">
-              <a href="#cadastro-form">
-                Criar minha conta grátis <ArrowRight className="h-5 w-5" />
-              </a>
-            </Button>
-            <p className="mt-2 text-center text-xs text-muted-foreground">
-              Sem cartão. Sem compromisso.
-            </p>
-
-            <ul className="mt-6 space-y-3">
-              {free.map((f, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-campo">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-apito text-campo">
-                    <Check className="h-3 w-3" strokeWidth={3} />
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Premium — discreto */}
-          <div className="relative rounded-3xl border border-border bg-campo p-8 text-linha">
-            <Trophy className="mb-3 h-7 w-7 text-apito" />
-            <p className="font-display text-2xl">Plano completo</p>
-            <p className="mt-2 text-sm text-linha/70">
-              Quando quiser histórico, relatórios e os alertas do Carlão.
-            </p>
-            <Button asChild variant="campo-outline" size="lg" className="mt-6 w-full rounded-full">
-              <a href="#recursos">Conhecer recursos premium</a>
-            </Button>
-            <ul className="mt-6 space-y-3">
-              {premium.map((f, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-linha/85">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-apito/20 text-apito">
-                    <Check className="h-3 w-3" strokeWidth={3} />
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-3">
+          {cards.map((c, i) => {
+            const Icon = c.icon;
+            return (
+              <div
+                key={i}
+                className="rounded-3xl border border-border bg-card p-7 shadow-card-soft transition-transform hover:-translate-y-1"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-campo text-apito">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <p className="font-display text-2xl text-campo">{c.title}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Anchor for the form (placeholder) */}
-        <div id="cadastro-form" className="mx-auto mt-12 max-w-md rounded-3xl bg-card p-6 text-center shadow-card-soft">
-          <p className="font-display text-xl text-campo">Pronto pra entrar em campo?</p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            O cadastro abre no app. Sem cartão, sem enrolação.
-          </p>
-          <Button asChild variant="apito" size="xl" className="mt-4 w-full rounded-full">
-            <a href="#cadastro-form" aria-label="Criar conta grátis">
-              Criar conta grátis
+        <div className="mx-auto mt-12 max-w-md text-center">
+          <Button asChild variant="apito" size="xl" className="w-full rounded-full">
+            <a href="#cadastro" aria-label="Criar minha conta grátis">
+              Criar minha conta grátis <ArrowRight className="h-5 w-5" />
             </a>
           </Button>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Sem cartão. Sem compromisso. Primeiro você entra em campo, depois decide se quer avançar.
+          </p>
         </div>
       </div>
     </section>

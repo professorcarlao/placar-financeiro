@@ -68,7 +68,7 @@ export const HowItWorksSection = () => {
 
         <div className="mt-12 text-center">
           <Button asChild variant="apito" size="xl" className="rounded-full">
-            <a href="#cadastro">Começar grátis agora</a>
+            <a href="#cadastro">Começar pelo Placar do Mês</a>
           </Button>
         </div>
       </div>

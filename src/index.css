@@ -133,6 +133,15 @@ All colors MUST be HSL.
   .bg-campo {
     background: var(--gradient-campo);
   }
+  .bg-campo-flat {
+    background-color: hsl(var(--campo));
+  }
+  .bg-campo-2-flat {
+    background-color: hsl(var(--campo-2));
+  }
+  .bg-campo-3-flat {
+    background-color: hsl(var(--campo-3));
+  }
   .bg-apito-gradient {
     background: var(--gradient-apito);
   }

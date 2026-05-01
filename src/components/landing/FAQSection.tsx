@@ -7,36 +7,36 @@ import {
 
 const faqs = [
   {
-    q: "Preciso pagar pra usar?",
-    a: "Não. Você cria uma conta gratuita e começa pelo básico. A assinatura serve pra liberar recursos mais completos como histórico, relatórios e alertas avançados.",
+    q: "Preciso pagar para começar?",
+    a: "Você pode começar criando uma conta grátis. Recursos extras podem aparecer dentro do app, depois que você conhecer a ferramenta.",
   },
   {
-    q: "Preciso colocar cartão pra começar?",
+    q: "Preciso colocar cartão?",
     a: "Não. O cadastro grátis é sem cartão e sem compromisso.",
   },
   {
-    q: "O app recomenda investimentos?",
-    a: "Não. O foco é organização financeira, clareza do mês, metas e controle de gastos. Não oferecemos recomendação de investimento.",
+    q: "O que é o Placar do Mês?",
+    a: "É a tela principal do app: mostra quanto entrou, quanto saiu, quanto foi para objetivos e quanto ainda dá pra jogar no mês.",
   },
   {
-    q: "Preciso cadastrar todos os meus gastos?",
-    a: "Não. A ideia é registrar os principais lances. Quanto mais você registra, melhor o placar fica — mas o app foi feito pra ser simples.",
+    q: "Preciso cadastrar todos os gastos?",
+    a: "Não. Você registra os principais lances. Quanto mais informação, melhor o placar — mas o app foi feito pra ser simples.",
+  },
+  {
+    q: "O app recomenda investimentos?",
+    a: "Não. O foco é organização financeira, clareza do mês, objetivos e controle de gastos.",
   },
   {
     q: "Isso substitui meu banco?",
-    a: "Não. O app não é banco. É uma ferramenta pra organizar e visualizar melhor sua vida financeira.",
+    a: "Não. O app não é banco. É uma ferramenta para organizar e visualizar melhor o seu mês.",
   },
   {
-    q: "Funciona pra quem odeia planilha?",
-    a: "Sim. Foi pensado justamente pra quem quer uma visão mais visual, simples e direta.",
+    q: "Funciona para quem odeia planilha?",
+    a: "Sim. Foi pensado justamente pra quem quer uma visão visual, simples e direta.",
   },
   {
-    q: "Posso usar pra metas financeiras?",
-    a: "Sim. Você acompanha metas como reserva, pagamento de dívidas, compras planejadas ou outros objetivos pessoais.",
-  },
-  {
-    q: "O que é o Placar do Mês?",
-    a: "É a tela principal do app. Ela mostra quanto entrou, quanto saiu, quanto foi pras metas e quanto ainda dá pra gastar no mês.",
+    q: "O que consigo organizar dentro do app?",
+    a: "Lances do mês, objetivos, gastos fixos, assinaturas e parcelamentos, tudo no mesmo lugar.",
   },
 ];
 
