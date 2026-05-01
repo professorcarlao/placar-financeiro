@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowDownRight, ArrowUpRight, Film, Plane, ShoppingCart, Target, Wallet } from "lucide-react";
+import { PhoneFrame } from "./PhoneFrame";
 
 const lances = [
   { icon: Wallet, name: "salário", value: "+ R$ 5.000", positive: true },
@@ -65,19 +66,23 @@ export const MesGanhandoFormaSection = () => {
           </div>
 
           {/* Resultado */}
-          <div className="rounded-2xl border border-apito/30 bg-campo-2-flat p-5 shadow-apito">
-            <p className="text-[10px] uppercase tracking-wider text-linha/55">
-              Quanto dá pra jogar no mês
-            </p>
-            <p className="font-display text-5xl text-apito">R$ 3.570</p>
-            <div className="mt-3 h-2 overflow-hidden rounded-full bg-linha/10">
-              <div className="h-full animate-fill-bar rounded-full bg-apito-gradient" style={{ ['--bar-target' as any]: '70%' } as any} />
-            </div>
-            <div className="mt-4 grid grid-cols-3 gap-2">
-              <Mini icon={<ArrowUpRight className="h-3 w-3" />} label="Entrou" value="R$ 5.000" tone="green" />
-              <Mini icon={<ArrowDownRight className="h-3 w-3" />} label="Saiu" value="R$ 1.130" tone="red" />
-              <Mini icon={<Target className="h-3 w-3" />} label="Objetivo" value="R$ 300" tone="yellow" />
-            </div>
+          <div className="flex justify-center">
+            <PhoneFrame className="max-w-[280px]">
+              <div className="p-5 bg-campo-flat">
+                <p className="text-[10px] uppercase tracking-wider text-linha/55">
+                  Quanto dá pra jogar no mês
+                </p>
+                <p className="font-display text-4xl text-apito">R$ 3.570</p>
+                <div className="mt-3 h-2 overflow-hidden rounded-full bg-linha/10">
+                  <div className="h-full rounded-full bg-apito-gradient" style={{ width: '70%' }} />
+                </div>
+                <div className="mt-4 grid grid-cols-3 gap-1.5">
+                  <Mini icon={<ArrowUpRight className="h-3 w-3" />} label="Entrou" value="R$ 5k" tone="green" />
+                  <Mini icon={<ArrowDownRight className="h-3 w-3" />} label="Saiu" value="R$ 1.1k" tone="red" />
+                  <Mini icon={<Target className="h-3 w-3" />} label="Meta" value="R$ 300" tone="yellow" />
+                </div>
+              </div>
+            </PhoneFrame>
           </div>
         </div>
       </div>

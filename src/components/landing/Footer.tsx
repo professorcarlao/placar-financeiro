@@ -10,9 +10,15 @@ export const Footer = () => {
           </span>
           <span className="font-display text-lg">Finanças em Campo</span>
         </div>
-        <p className="text-xs text-linha/50">
-          © {new Date().getFullYear()} Finanças em Campo. Organização financeira sem cara de planilha.
-        </p>
+        <div className="flex flex-col items-center gap-4 md:items-end">
+          <div className="flex gap-4">
+            <a href="#" className="text-[10px] uppercase tracking-widest text-linha/40 hover:text-apito transition-colors">Política de Privacidade</a>
+            <a href="#" className="text-[10px] uppercase tracking-widest text-linha/40 hover:text-apito transition-colors">Termos de Uso</a>
+          </div>
+          <p className="text-xs text-linha/50 text-center md:text-right">
+            © {new Date().getFullYear()} Finanças em Campo. Organização financeira sem cara de planilha.
+          </p>
+        </div>
       </div>
     </footer>
   );

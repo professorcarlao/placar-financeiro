@@ -33,11 +33,11 @@ export const FeaturesGridSection = () => {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {recursos.map((r, i) => (
             <div
               key={i}
-              className="rounded-2xl border border-linha/10 bg-campo-2-flat p-4 transition-all hover:-translate-y-1"
+              className="rounded-2xl border border-linha/10 bg-campo-2-flat p-5"
             >
               <div className="mb-3">{r.mockup}</div>
               <p className="font-display text-base text-linha">{r.title}</p>

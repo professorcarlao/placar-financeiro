@@ -114,7 +114,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Manrope', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
@@ -172,15 +172,9 @@ All colors MUST be HSL.
   from { width: 0; }
   to { width: var(--bar-target, 70%); }
 }
-@keyframes float-soft {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
+
 .animate-fill-bar {
   animation: fill-bar 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-.animate-float-soft {
-  animation: float-soft 6s ease-in-out infinite;
 }
 
 @keyframes fade-in {

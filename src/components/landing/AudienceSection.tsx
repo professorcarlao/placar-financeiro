@@ -28,7 +28,7 @@ export const AudienceSection = () => {
             return (
               <div
                 key={i}
-                className="rounded-2xl border-l-4 border-apito bg-card p-6 shadow-card-soft transition-transform hover:-translate-y-1"
+                className="rounded-2xl border-l-4 border-apito bg-card p-6 shadow-card-soft"
               >
                 <Icon className="mb-3 h-7 w-7 text-campo" strokeWidth={2} />
                 <p className="font-display text-xl text-campo">{p.title}</p>

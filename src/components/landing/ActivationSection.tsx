@@ -41,7 +41,7 @@ export const ActivationSection = () => {
           {passos.map((c, i) => {
             const Icon = c.icon;
             return (
-              <div key={i} className="rounded-2xl border border-border bg-card p-5 shadow-card-soft transition-transform hover:-translate-y-1">
+              <div key={i} className="rounded-2xl border border-border bg-card p-5 shadow-card-soft">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-campo text-apito">
                   <Icon className="h-5 w-5" />
                 </div>

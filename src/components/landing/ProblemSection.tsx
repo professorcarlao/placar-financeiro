@@ -32,7 +32,7 @@ export const ProblemSection = () => {
             return (
               <div
                 key={i}
-                className="group rounded-2xl border border-border bg-card p-5 shadow-card-soft transition-transform hover:-translate-y-1"
+                className="group rounded-2xl border border-border bg-card p-5 shadow-card-soft"
               >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-cartao-vermelho/10 text-cartao-vermelho">
                   <Icon className="h-5 w-5" />

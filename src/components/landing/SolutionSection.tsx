@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDownRight, ArrowRight, ArrowUpRight, Target, Wallet } from "lucide-react";
-import { AppShellMockup } from "./mockups/AppShellMockup";
-import { PlacarDashboardMockup } from "./mockups/PlacarDashboardMockup";
+import { PhoneFrame } from "./PhoneFrame";
+import { PlacarMockup } from "./PlacarMockup";
 
 const blocos = [
   { icon: Wallet, title: "Quanto dá pra jogar", desc: "O número principal do mês.", tone: "text-apito-deep bg-apito/15" },
@@ -49,11 +49,11 @@ export const SolutionSection = () => {
           </Button>
         </div>
 
-        <div className="relative">
-          <div className="absolute inset-0 -z-10 mx-auto h-[420px] w-[420px] rounded-full bg-apito/20 blur-3xl" />
-          <AppShellMockup active="placar">
-            <PlacarDashboardMockup />
-          </AppShellMockup>
+        <div className="relative mx-auto w-full max-w-[300px]">
+          <div className="absolute inset-0 -z-10 mx-auto h-[400px] w-[400px] -translate-y-10 rounded-full bg-apito/20 blur-3xl" />
+          <PhoneFrame>
+            <PlacarMockup />
+          </PhoneFrame>
         </div>
       </div>
     </section>

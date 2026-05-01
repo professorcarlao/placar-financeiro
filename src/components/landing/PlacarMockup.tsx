@@ -24,8 +24,8 @@ export const PlacarMockup = () => {
         <p className="font-display text-3xl text-apito">R$ 1.240</p>
         <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-linha/10">
           <div
-            className="h-full animate-fill-bar rounded-full bg-apito-gradient"
-            style={{ ['--bar-target' as string]: '62%' } as React.CSSProperties}
+            className="h-full rounded-full bg-apito-gradient"
+            style={{ width: '62%' }}
           />
         </div>
         <p className="mt-1 text-[9px] text-linha/45">12 dias restantes</p>

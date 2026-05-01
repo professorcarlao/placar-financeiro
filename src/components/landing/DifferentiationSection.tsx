@@ -43,7 +43,7 @@ export const DifferentiationSection = () => {
             return (
               <div
                 key={i}
-                className={`rounded-2xl p-7 transition-transform hover:-translate-y-1 ${
+                className={`rounded-2xl p-7 ${
                   isHL
                     ? "border-2 border-apito bg-apito-gradient text-campo shadow-apito"
                     : "border border-linha/10 bg-campo-2"

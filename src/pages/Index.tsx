@@ -10,10 +10,12 @@ import { RegistroSimplesSection } from "@/components/landing/RegistroSimplesSect
 import { AudienceSection } from "@/components/landing/AudienceSection";
 import { DifferentiationSection } from "@/components/landing/DifferentiationSection";
 import { CarlaoSection } from "@/components/landing/CarlaoSection";
+import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
 import { ActivationSection } from "@/components/landing/ActivationSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { Footer } from "@/components/landing/Footer";
+import { StickyMobileCTA } from "@/components/landing/StickyMobileCTA";
 
 const Index = () => {
   return (
@@ -31,11 +33,13 @@ const Index = () => {
         <AudienceSection />
         <DifferentiationSection />
         <CarlaoSection />
+        <TestimonialsSection />
         <ActivationSection />
         <FAQSection />
         <FinalCTASection />
       </main>
       <Footer />
+      <StickyMobileCTA />
     </div>
   );
 };

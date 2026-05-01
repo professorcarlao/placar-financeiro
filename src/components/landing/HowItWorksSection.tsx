@@ -2,30 +2,42 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { NovoLanceDrawerMockup } from "./mockups/NovoLanceDrawerMockup";
 import { LancesListMockup } from "./mockups/LancesListMockup";
-import { PlacarDashboardMockup } from "./mockups/PlacarDashboardMockup";
-import { AppShellMockup } from "./mockups/AppShellMockup";
+import { PhoneFrame } from "./PhoneFrame";
+import { PlacarMockup } from "./PlacarMockup";
 
 const passos = [
   {
     n: "01",
     title: "Adicione um lance",
     desc: "Escolha Gol a Favor ou Gol Contra, descrição, valor e data. Pronto.",
-    mockup: <NovoLanceDrawerMockup />,
+    mockup: (
+      <PhoneFrame className="max-w-[240px]">
+        <div className="p-4 bg-campo-flat h-full min-h-[320px]">
+           <NovoLanceDrawerMockup />
+        </div>
+      </PhoneFrame>
+    ),
   },
   {
     n: "02",
     title: "O lance entra na lista",
     desc: "Salário, mercado, assinaturas e parcelas aparecem organizados por mês.",
-    mockup: <LancesListMockup />,
+    mockup: (
+      <PhoneFrame className="max-w-[240px]">
+        <div className="p-4 bg-campo-flat h-full min-h-[320px]">
+          <LancesListMockup />
+        </div>
+      </PhoneFrame>
+    ),
   },
   {
     n: "03",
     title: "O placar atualiza",
     desc: "Você vê quanto entrou, quanto saiu e quanto ainda dá pra jogar.",
     mockup: (
-      <AppShellMockup active="placar">
-        <PlacarDashboardMockup compact />
-      </AppShellMockup>
+      <PhoneFrame className="max-w-[240px]">
+        <PlacarMockup />
+      </PhoneFrame>
     ),
   },
 ];
@@ -47,23 +59,27 @@ export const HowItWorksSection = () => {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-10 lg:grid-cols-3">
           {passos.map((p, i) => (
-            <div key={i} className="relative">
+            <div key={i} className="relative flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="mb-3 flex items-center gap-3">
                 <span className="font-display text-3xl text-apito">{p.n}</span>
                 <p className="font-display text-xl">{p.title}</p>
               </div>
-              <p className="mb-4 text-sm text-linha/70">{p.desc}</p>
-              <div className="transition-transform hover:-translate-y-1">{p.mockup}</div>
+              <p className="mb-6 text-sm text-linha/70 max-w-[280px]">{p.desc}</p>
+              <div className="w-full flex justify-center lg:justify-start">
+                {p.mockup}
+              </div>
               {i < passos.length - 1 && (
-                <ArrowRight className="absolute -right-4 top-1/2 hidden h-6 w-6 text-apito lg:block" />
+                <div className="absolute -right-5 top-1/2 hidden lg:block translate-x-1/2">
+                   <ArrowRight className="h-6 w-6 text-apito/30" />
+                </div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-16 text-center">
           <Button asChild variant="apito" size="xl" className="rounded-full">
             <a href="#cadastro">Começar pelo Placar do Mês</a>
           </Button>

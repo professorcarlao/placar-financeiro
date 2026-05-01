@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { NovoLanceDrawerMockup } from "./mockups/NovoLanceDrawerMockup";
+import { PhoneFrame } from "./PhoneFrame";
 
 const pontos = [
   "Gol a Favor ou Gol Contra",
@@ -40,9 +41,13 @@ export const RegistroSimplesSection = () => {
           </Button>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute inset-0 -z-10 mx-auto h-[300px] w-[300px] rounded-full bg-apito/20 blur-3xl" />
-          <NovoLanceDrawerMockup />
+        <div className="relative mx-auto w-full max-w-[300px]">
+          <div className="absolute inset-0 -z-10 mx-auto h-[400px] w-[400px] -translate-y-10 rounded-full bg-apito/20 blur-3xl" />
+          <PhoneFrame>
+            <div className="p-4 bg-campo-flat h-full min-h-[320px]">
+              <NovoLanceDrawerMockup />
+            </div>
+          </PhoneFrame>
         </div>
       </div>
     </section>

@@ -43,12 +43,12 @@ export const FinalCTASection = () => {
           </div>
         </div>
 
-        <div className="relative mx-auto">
+        <div className="relative mx-auto mt-10 lg:mt-0">
           <div className="absolute inset-0 -z-10 h-full w-full rounded-full bg-apito/20 blur-3xl" />
           <img
             src={carlao}
-            alt="Professor Carlão chamando você pra entrar em campo"
-            className="w-full max-w-xs animate-float-soft drop-shadow-2xl"
+            alt="Professor Carlão"
+            className="w-full max-w-[240px] drop-shadow-2xl grayscale-[0.2]"
           />
         </div>
       </div>
