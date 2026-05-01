@@ -15,7 +15,7 @@ export const PhoneFrame = ({ children, className }: PhoneFrameProps) => {
       )}
     >
       <div className="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-campo" />
-      <div className="overflow-hidden rounded-[2rem] bg-linha">
+      <div className="overflow-hidden rounded-[2rem] bg-campo-flat">
         {children}
       </div>
     </div>
