@@ -172,5 +172,4 @@ All colors MUST be HSL.
 }
 .animate-float-soft {
   animation: float-soft 6s ease-in-out infinite;
-  }
 }
