@@ -1,44 +1,51 @@
-import { ArrowDownRight, ArrowUpRight, Target, Wallet } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Clock, Target } from "lucide-react";
 
 export const PlacarMockup = () => {
   return (
-    <div className="bg-linha p-4 pt-8">
+    <div className="bg-campo-flat px-4 pb-4 pt-8 text-linha">
+      {/* Header */}
       <div className="mb-3 flex items-center justify-between">
         <div>
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-            Placar do mês
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-linha/55">
+            Placar do Mês
           </p>
-          <p className="font-display text-xl text-campo">Novembro</p>
+          <p className="font-display text-xl text-linha">Novembro</p>
         </div>
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-campo text-apito">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-apito-gradient text-campo">
           <span className="text-xs font-bold">C</span>
         </div>
       </div>
 
       {/* Big number */}
-      <div className="mb-3 rounded-2xl bg-campo p-4 text-linha">
-        <p className="text-[10px] uppercase tracking-wider text-linha/60">
-          Ainda posso gastar
+      <div className="mb-3 rounded-2xl border border-linha/10 bg-campo-2-flat p-4">
+        <p className="text-[10px] uppercase tracking-wider text-linha/55">
+          Quanto dá pra jogar no mês
         </p>
         <p className="font-display text-3xl text-apito">R$ 1.240</p>
-        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-linha/15">
+        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-linha/10">
           <div
             className="h-full animate-fill-bar rounded-full bg-apito-gradient"
             style={{ ['--bar-target' as string]: '62%' } as React.CSSProperties}
           />
         </div>
+        <p className="mt-1 text-[9px] text-linha/45">12 dias restantes</p>
       </div>
 
-      {/* 3 mini cards */}
-      <div className="grid grid-cols-3 gap-2">
-        <MiniCard icon={<ArrowUpRight className="h-3 w-3" />} label="Entrou" value="4.8k" tone="green" />
-        <MiniCard icon={<ArrowDownRight className="h-3 w-3" />} label="Saiu" value="3.1k" tone="red" />
-        <MiniCard icon={<Target className="h-3 w-3" />} label="Metas" value="450" tone="yellow" />
+      {/* 2x2 grid de cards reais */}
+      <div className="grid grid-cols-2 gap-2">
+        <MiniCard icon={<ArrowUpRight className="h-3 w-3" />} label="Entrou no jogo" value="4.800" tone="green" />
+        <MiniCard icon={<ArrowDownRight className="h-3 w-3" />} label="Saiu do jogo" value="3.100" tone="red" />
+        <MiniCard icon={<Target className="h-3 w-3" />} label="Separado p/ objetivos" value="450" tone="yellow" />
+        <MiniCard icon={<Clock className="h-3 w-3" />} label="Ainda vem por aí" value="620" tone="neutral" />
       </div>
 
-      <div className="mt-3 flex items-center gap-2 rounded-xl bg-muted p-2">
-        <Wallet className="h-3 w-3 text-campo" />
-        <p className="text-[10px] text-campo">14 lances no mês</p>
+      {/* Chip rodapé */}
+      <div className="mt-3 flex items-center justify-between rounded-xl border border-linha/10 bg-campo-3-flat px-3 py-2">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-apito" />
+          <p className="text-[10px] text-linha/80">Seus objetivos</p>
+        </div>
+        <p className="text-[10px] font-semibold text-apito">3 ativos</p>
       </div>
     </div>
   );
@@ -53,20 +60,21 @@ const MiniCard = ({
   icon: React.ReactNode;
   label: string;
   value: string;
-  tone: "green" | "red" | "yellow";
+  tone: "green" | "red" | "yellow" | "neutral";
 }) => {
   const tones = {
-    green: "bg-gramado/15 text-gramado",
-    red: "bg-cartao-vermelho/10 text-cartao-vermelho",
-    yellow: "bg-apito/15 text-apito-deep",
+    green: "bg-gramado/25 text-apito",
+    red: "bg-cartao-vermelho/20 text-cartao-vermelho",
+    yellow: "bg-apito/20 text-apito",
+    neutral: "bg-linha/10 text-linha/80",
   };
   return (
-    <div className="rounded-xl bg-muted p-2">
-      <div className={`mb-1 inline-flex h-5 w-5 items-center justify-center rounded-md ${tones[tone]}`}>
+    <div className="rounded-xl border border-linha/10 bg-campo-2-flat p-2.5">
+      <div className={`mb-1.5 inline-flex h-5 w-5 items-center justify-center rounded-md ${tones[tone]}`}>
         {icon}
       </div>
-      <p className="text-[9px] uppercase text-muted-foreground">{label}</p>
-      <p className="font-display text-sm text-campo">R$ {value}</p>
+      <p className="text-[9px] uppercase leading-tight text-linha/55">{label}</p>
+      <p className="font-display text-base text-linha">R$ {value}</p>
     </div>
   );
 };
