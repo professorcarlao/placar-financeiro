@@ -1,32 +1,24 @@
 import {
   BarChart3,
   Bell,
-  Boxes,
-  Clipboard,
-  History,
-  Moon,
+  CalendarClock,
+  ClipboardList,
+  CreditCard,
+  Repeat,
   Target,
   Trophy,
 } from "lucide-react";
 
-type Status = "free" | "premium" | "soon";
-
-const recursos: { icon: any; title: string; desc: string; status: Status }[] = [
-  { icon: Trophy, title: "Placar do Mês", desc: "Entradas, saídas, metas e quanto ainda pode gastar.", status: "free" },
-  { icon: Clipboard, title: "Registro simples", desc: "Cadastre os lances importantes sem burocracia.", status: "free" },
-  { icon: Target, title: "Metas financeiras", desc: "Reserva, dívidas, viagem ou compras importantes.", status: "free" },
-  { icon: History, title: "Histórico completo", desc: "Veja como seu jogo financeiro evolui mês a mês.", status: "premium" },
-  { icon: BarChart3, title: "Relatórios visuais", desc: "Padrões de gasto sem montar gráfico manualmente.", status: "premium" },
-  { icon: Bell, title: "Alertas do Carlão", desc: "Avisos simples quando algum setor começa a pesar.", status: "premium" },
-  { icon: Boxes, title: "Categorias inteligentes", desc: "Organize gastos por áreas da vida, sem complicação.", status: "free" },
-  { icon: Moon, title: "Modo claro e escuro", desc: "Use do jeito que combina melhor com sua rotina.", status: "soon" },
+const recursos = [
+  { icon: Trophy, title: "Placar do Mês", desc: "A visão central do mês: entrou, saiu, separado para objetivos e quanto ainda dá pra jogar." },
+  { icon: ClipboardList, title: "Lances", desc: "Registre entradas e saídas de forma rápida, sem complicar a sua rotina." },
+  { icon: BarChart3, title: "Estatísticas", desc: "Veja como seu jogo financeiro evolui ao longo dos meses, em gráficos simples." },
+  { icon: Target, title: "Objetivos", desc: "Reserva, viagem, quitar dívida ou qualquer meta importante com progresso visível." },
+  { icon: CalendarClock, title: "Gastos Fixos", desc: "Aluguel, luz, internet, condomínio e outras cobranças recorrentes ficam organizadas para você saber o que já entra no jogo todo mês." },
+  { icon: Repeat, title: "Assinaturas", desc: "Netflix, aplicativos, serviços e cobranças mensais deixam de passar escondidos pelo campo." },
+  { icon: CreditCard, title: "Parcelamentos", desc: "Compras parceladas aparecem com progresso, saldo restante e próxima cobrança, para você não esquecer o que ainda está no campeonato." },
+  { icon: Bell, title: "Alertas do Carlão", desc: "Avisos diretos quando algum setor começa a pesar no seu mês." },
 ];
-
-const labels: Record<Status, { text: string; cls: string }> = {
-  free: { text: "Grátis", cls: "bg-gramado/15 text-gramado" },
-  premium: { text: "Premium", cls: "bg-apito/20 text-apito-deep" },
-  soon: { text: "Em breve", cls: "bg-muted text-muted-foreground" },
-};
 
 export const FeaturesGridSection = () => {
   return (
@@ -44,15 +36,11 @@ export const FeaturesGridSection = () => {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {recursos.map((r, i) => {
             const Icon = r.icon;
-            const lbl = labels[r.status];
             return (
               <div
                 key={i}
                 className="group relative rounded-2xl border border-border bg-card p-5 shadow-card-soft transition-all hover:-translate-y-1"
               >
-                <span className={`absolute right-3 top-3 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase ${lbl.cls}`}>
-                  {lbl.text}
-                </span>
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-campo text-apito transition-colors group-hover:bg-apito group-hover:text-campo">
                   <Icon className="h-5 w-5" />
                 </div>
