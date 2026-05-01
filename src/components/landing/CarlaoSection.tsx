@@ -1,9 +1,10 @@
 import carlao from "@/assets/professor-carlao.png";
 
 const falas = [
-  "Craque, primeiro a gente olha o placar. Depois ajusta a tática.",
-  "Dinheiro sem organização é time sem goleiro: uma hora entra bola.",
-  "Não precisa sofrer com planilha. Precisa saber pra onde o dinheiro tá indo.",
+  "Craque, primeiro olha quanto dá pra jogar no mês.",
+  "Assinatura esquecida também faz gol contra.",
+  "Parcelamento sem controle vira campeonato longo.",
+  "Meta boa é meta que aparece no placar.",
 ];
 
 export const CarlaoSection = () => {
