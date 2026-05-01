@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ClipboardList, LineChart, UserPlus, Whistle } from "lucide-react";
+import { ClipboardList, LineChart, Megaphone, UserPlus } from "lucide-react";
 
 const passos = [
   {
@@ -22,7 +22,7 @@ const passos = [
   },
   {
     n: "04",
-    icon: Whistle,
+    icon: Megaphone,
     title: "Ajuste o jogo no tempo",
     desc: "Com o placar na frente, você corrige a rota antes do apito final.",
   },
