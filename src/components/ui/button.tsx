@@ -15,11 +15,18 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        apito:
+          "bg-apito-gradient text-campo font-bold shadow-apito hover:brightness-105 hover:-translate-y-0.5 transition-all",
+        campo:
+          "bg-campo text-linha hover:bg-campo-2 transition-all border border-campo-2",
+        "campo-outline":
+          "border-2 border-linha/30 bg-transparent text-linha hover:bg-linha/10 transition-all",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-xl px-8 text-base",
         icon: "h-10 w-10",
       },
     },

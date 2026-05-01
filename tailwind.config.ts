@@ -19,6 +19,23 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        campo: {
+          DEFAULT: "hsl(var(--campo))",
+          2: "hsl(var(--campo-2))",
+          3: "hsl(var(--campo-3))",
+        },
+        gramado: {
+          DEFAULT: "hsl(var(--gramado))",
+          line: "hsl(var(--gramado-line))",
+        },
+        apito: {
+          DEFAULT: "hsl(var(--apito))",
+          glow: "hsl(var(--apito-glow))",
+          deep: "hsl(var(--apito-deep))",
+        },
+        linha: "hsl(var(--linha))",
+        "cartao-amarelo": "hsl(var(--cartao-amarelo))",
+        "cartao-vermelho": "hsl(var(--cartao-vermelho))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
