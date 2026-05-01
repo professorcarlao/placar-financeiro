@@ -2,21 +2,21 @@ import { Building2, Sheet, Trophy } from "lucide-react";
 
 const cards = [
   {
-    icon: Sheet,
-    title: "Planilha tradicional",
-    desc: "Muitas abas, fórmulas, manutenção manual. Cansa rápido.",
+    icon: Building2,
+    title: "Banco",
+    desc: "Mostra movimentações, mas nem sempre te dá uma visão simples do mês.",
     tone: "muted",
   },
   {
-    icon: Building2,
-    title: "App do banco",
-    desc: "Mostra movimentações, mas não explica o jogo do mês.",
+    icon: Sheet,
+    title: "Planilha",
+    desc: "Pode funcionar, mas exige disciplina, manutenção e paciência.",
     tone: "muted",
   },
   {
     icon: Trophy,
     title: "Finanças em Campo",
-    desc: "Mostra o placar, organiza seus lances e ajuda você a entender o mês.",
+    desc: "Mostra o jogo em linguagem simples: entrou, saiu, separou para metas e quanto ainda dá para usar.",
     tone: "highlight",
   },
 ];
@@ -31,12 +31,9 @@ export const DifferentiationSection = () => {
             Por que é diferente
           </span>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl">
-            Você não precisa de mais <br />
-            uma <span className="text-apito">tela cheia de número</span>.
+            Não é banco. Não é planilha. <br />
+            É o <span className="text-apito">placar do seu dinheiro</span>.
           </h2>
-          <p className="mt-4 text-lg text-linha/75">
-            Precisa de um placar que faça sentido.
-          </p>
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
