@@ -5,28 +5,28 @@ import { PlacarMockup } from "./PlacarMockup";
 
 const blocos = [
   {
+    icon: Wallet,
+    title: "Quanto dá pra jogar no mês",
+    desc: "O número principal do Placar do Mês mostra quanto ainda sobra para usar sem entrar no sufoco.",
+    tone: "text-campo bg-campo/10",
+  },
+  {
     icon: ArrowUpRight,
-    title: "Gols a favor",
-    desc: "Tudo que entrou: salário, renda extra, qualquer recebimento.",
+    title: "Entrou no jogo",
+    desc: "Tudo que entrou no mês aparece como ponto a favor: salário, renda extra, recebimentos e outros valores.",
     tone: "text-gramado bg-gramado/10",
   },
   {
     icon: ArrowDownRight,
-    title: "Gols contra",
-    desc: "Contas, cartão, mercado, delivery, transporte e gastos do dia a dia.",
+    title: "Saiu do jogo",
+    desc: "Contas, compras, cartão, mercado e gastos do dia a dia aparecem como saídas do mês.",
     tone: "text-cartao-vermelho bg-cartao-vermelho/10",
   },
   {
     icon: Target,
-    title: "Metas do mês",
-    desc: "Quanto você está separando pra reserva, dívida, viagem ou compra importante.",
+    title: "Separado para objetivos",
+    desc: "O app mostra quanto você já colocou em metas, como reserva, dívida, viagem ou qualquer objetivo importante.",
     tone: "text-apito-deep bg-apito/15",
-  },
-  {
-    icon: Wallet,
-    title: "Ainda posso gastar",
-    desc: "O número que muita gente queria saber todo dia. Sem culpa, sem susto.",
-    tone: "text-campo bg-campo/10",
   },
 ];
 
@@ -67,7 +67,7 @@ export const SolutionSection = () => {
 
           <Button asChild variant="apito" size="lg" className="mt-8 rounded-full">
             <a href="#cadastro">
-              Quero ver meu placar grátis <ArrowRight className="h-4 w-4" />
+              Ver meu placar grátis <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
         </div>
