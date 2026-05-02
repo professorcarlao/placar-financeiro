@@ -39,9 +39,9 @@ export const RegistroSimplesSection = () => {
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="absolute -inset-10 -z-10 bg-campo/5 blur-[100px] rounded-full" />
-              <PhoneFrame className="phone-mockup-lg shadow-2xl">
+            <div className="relative w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[340px]">
+              <div className="absolute -inset-10 -z-10 bg-campo/5 blur-[80px] rounded-full sm:blur-[100px]" />
+              <PhoneFrame className="shadow-2xl ring-4 ring-white/10">
                 <img 
                   src="/assets/app-screenshots/gol-contra-lance.png" 
                   alt="Registro de Lance" 

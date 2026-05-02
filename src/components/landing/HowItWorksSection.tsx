@@ -39,7 +39,7 @@ export const HowItWorksSection = () => {
         <div className="mt-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {steps.map((s, i) => (
             <div key={i} className="flex flex-col items-center text-center">
-              <div className="mb-12 w-full max-w-[280px] lg:max-w-[320px]">
+              <div className="mb-12 w-full max-w-[240px] lg:max-w-[280px]">
                 <PhoneFrame className="shadow-2xl ring-4 ring-campo/5 transition-all duration-500 hover:-translate-y-4 hover:rotate-2">
                   <img src={s.image} alt={s.title} className="h-full w-full object-cover" />
                 </PhoneFrame>

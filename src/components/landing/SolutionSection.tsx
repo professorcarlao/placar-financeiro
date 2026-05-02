@@ -61,8 +61,8 @@ export const SolutionSection = () => {
           </div>
 
           <div className="relative flex justify-center lg:justify-end w-full overflow-hidden sm:overflow-visible">
-            <div className="relative w-full max-w-[260px] sm:max-w-[400px] lg:max-w-[480px]">
-              <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:-inset-20 sm:blur-[120px]" />
+            <div className="relative w-full max-w-[260px] sm:max-w-[360px] lg:max-w-[420px]">
+              <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:-inset-16 sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10">
                 <img 
                   src="/assets/app-screenshots/placar-do-mes.png" 

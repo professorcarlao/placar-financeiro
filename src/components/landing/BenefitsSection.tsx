@@ -43,29 +43,33 @@ export const BenefitsSection = () => {
           </h2>
         </div>
 
-        <div className="grid gap-3 sm:gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
           {benefits.map((b, i) => (
             <div
               key={i}
-              className="group flex flex-col items-center gap-4 rounded-[2rem] bg-white p-5 shadow-card-soft border border-border transition-all hover:shadow-xl sm:p-10 lg:flex-row lg:gap-10 lg:p-12"
+              className="group relative flex flex-col items-center gap-6 rounded-[2.5rem] bg-white p-6 shadow-card-soft border border-border transition-all hover:shadow-xl sm:p-8 lg:flex-row lg:items-center lg:gap-10 lg:p-10"
             >
-              <div className="w-full max-w-[120px] shrink-0 sm:max-w-[180px]">
+              <div className="w-full max-w-[120px] shrink-0 sm:max-w-[140px] lg:max-w-[160px]">
                 {b.isApp ? (
-                  <PhoneFrame className="shadow-xl">
+                  <PhoneFrame minimal hideButtons className="shadow-xl">
                     <img src={b.image} alt={b.title} className="h-full w-full object-cover" />
                   </PhoneFrame>
                 ) : (
-                  <div className="relative overflow-hidden rounded-[2rem] border-4 border-apito/20 bg-apito/5 p-2 aspect-[9/19]">
-                    <img src={b.image} alt={b.title} className="w-full h-full object-cover rounded-[1.5rem] grayscale transition-all group-hover:grayscale-0" />
-                    <div className="absolute right-2 bottom-2 flex h-8 w-8 items-center justify-center rounded-full bg-apito text-campo shadow-lg sm:h-10 sm:w-10">
-                      <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <div className="relative">
+                    <div className="relative overflow-hidden rounded-3xl border-2 border-apito/30 bg-apito/5 p-1 shadow-inner aspect-square">
+                      <img src={b.image} alt={b.title} className="w-full h-full object-cover rounded-2xl" />
+                    </div>
+                    {/* Mini Insight Card */}
+                    <div className="absolute -right-10 -bottom-4 z-10 w-32 rounded-2xl bg-white p-3 shadow-2xl border border-border sm:-right-12 lg:-right-10">
+                      <p className="text-[8px] font-black uppercase tracking-wider text-gramado mb-1">Leitura do jogo</p>
+                      <p className="text-[10px] leading-tight font-bold text-campo">Seu mês está sob controle.</p>
                     </div>
                   </div>
                 )}
               </div>
               <div className="flex-1 text-center lg:text-left">
-                <p className="font-display text-xl text-campo leading-tight sm:text-2xl lg:text-3xl">{b.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground font-medium sm:mt-4 sm:text-base">
+                <h3 className="font-display text-2xl text-campo leading-tight sm:text-3xl lg:text-4xl">{b.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-medium sm:text-base lg:max-w-[320px]">
                   {b.desc}
                 </p>
               </div>

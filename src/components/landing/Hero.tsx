@@ -55,7 +55,7 @@ export const Hero = () => {
 
           {/* Real App Screenshot Mockup */}
           <div className="relative flex justify-center lg:justify-end w-full overflow-hidden sm:overflow-visible">
-            <div className="relative w-full max-w-[260px] sm:max-w-[380px] lg:max-w-[420px]">
+            <div className="relative w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[380px]">
               <div className="absolute -inset-10 -z-10 bg-apito/20 blur-[60px] rounded-full sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10">
                 <img 
