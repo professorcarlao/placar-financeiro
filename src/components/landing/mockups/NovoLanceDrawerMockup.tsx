@@ -1,59 +1,71 @@
-import { CalendarDays, X } from "lucide-react";
+import { Calendar, X } from "lucide-react";
 
 export const NovoLanceDrawerMockup = () => {
   return (
-    <div className="overflow-hidden rounded-2xl border border-linha/10 bg-campo-flat p-4 text-linha shadow-mockup">
+    <div className="flex flex-col h-full bg-[#06140D] text-white p-4 font-sans">
       {/* Header */}
-      <div className="mb-3 flex items-center justify-between">
-        <p className="font-display text-base">Novo lance</p>
-        <X className="h-3.5 w-3.5 text-linha/55" />
-      </div>
-
-      {/* Toggle Gol contra / Gol a favor */}
-      <div className="mb-3 grid grid-cols-2 gap-1.5">
-        <div className="rounded-lg border border-cartao-vermelho/50 bg-cartao-vermelho/10 py-1.5 text-center text-[10px] font-semibold text-cartao-vermelho">
-          ⚽ Gol Contra
-        </div>
-        <div className="rounded-lg border border-linha/10 bg-campo-2-flat py-1.5 text-center text-[10px] font-semibold text-linha/65">
-          🚩 Gol a Favor
+      <div className="mb-8 flex items-center justify-between">
+        <div className="flex-1" />
+        <p className="text-base font-black">Novo lance</p>
+        <div className="flex-1 flex justify-end">
+          <X className="h-5 w-5 text-white/40" />
         </div>
       </div>
 
-      {/* Field: Descrição */}
-      <Field label="Descrição">
-        <p className="text-[10px] text-linha/40">Ex.: iFood, Salário, Academia…</p>
-      </Field>
+      {/* Toggle */}
+      <div className="mb-6 grid grid-cols-2 gap-3">
+        <div className="flex items-center justify-center gap-2 rounded-xl border-2 border-[#FF5252] bg-[#FF5252]/10 py-2.5 text-[11px] font-black uppercase text-[#FF5252]">
+          <span>⚽</span> Gol Contra
+        </div>
+        <div className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 py-2.5 text-[11px] font-black uppercase text-white/40">
+          <span>🥅</span> Gol a Favor
+        </div>
+      </div>
 
-      {/* Field: Valor + Data */}
-      <div className="mt-2 grid grid-cols-2 gap-2">
-        <Field label="Valor">
-          <p className="text-[11px] text-linha/40">R$ 0,00</p>
-        </Field>
-        <Field label="Data">
-          <div className="flex items-center gap-1 text-[10px] text-linha/65">
-            <CalendarDays className="h-3 w-3" /> 01/05/2026
+      <div className="space-y-6">
+        {/* Descrição */}
+        <div>
+          <label className="mb-2 block text-[11px] font-black uppercase tracking-widest text-white">Descrição</label>
+          <div className="rounded-xl border border-white/10 bg-[#11241B] p-4">
+            <p className="text-sm text-white/40 font-bold">Ex.: iFood, Salário, Academia...</p>
           </div>
-        </Field>
+        </div>
+
+        {/* Row Valor / Data */}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="mb-2 block text-[11px] font-black uppercase tracking-widest text-white">Valor</label>
+            <div className="rounded-xl border border-white/10 bg-[#11241B] p-4">
+              <p className="text-sm text-white font-bold">R$ 0,00</p>
+            </div>
+          </div>
+          <div>
+            <label className="mb-2 block text-[11px] font-black uppercase tracking-widest text-white">Data</label>
+            <div className="rounded-xl border border-white/10 bg-[#11241B] p-4 flex items-center gap-2">
+              <Calendar className="h-4 w-4 text-white/40" />
+              <p className="text-sm text-white font-bold">02/05/2026</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Observações */}
+        <div>
+          <label className="mb-2 block text-[11px] font-black uppercase tracking-widest text-white">Observações (opcional)</label>
+          <div className="rounded-2xl border border-white/10 bg-[#11241B] p-4 min-h-[100px]">
+            <p className="text-sm text-white/40 font-bold">Notas adicionais...</p>
+          </div>
+        </div>
       </div>
 
-      {/* Buttons */}
-      <div className="mt-4 grid grid-cols-2 gap-2">
-        <button className="rounded-lg border border-linha/10 bg-campo-2-flat py-1.5 text-[10px] text-linha/70">
+      {/* Footer Buttons */}
+      <div className="mt-auto grid grid-cols-2 gap-4 pt-8">
+        <div className="flex items-center justify-center rounded-xl border border-white/10 bg-white/5 py-3.5 text-xs font-black uppercase text-white">
           Cancelar
-        </button>
-        <button className="rounded-lg bg-apito py-1.5 text-[10px] font-bold text-campo">
+        </div>
+        <div className="flex items-center justify-center rounded-xl bg-[#F7E135] py-3.5 text-xs font-black uppercase text-black shadow-lg shadow-[#F7E135]/20">
           Registrar lance
-        </button>
+        </div>
       </div>
     </div>
   );
 };
-
-const Field = ({ label, children }: { label: string; children: React.ReactNode }) => (
-  <div>
-    <p className="mb-1 text-[9px] font-semibold uppercase tracking-wider text-linha/65">{label}</p>
-    <div className="rounded-lg border border-linha/10 bg-campo-2-flat px-2 py-1.5">
-      {children}
-    </div>
-  </div>
-);

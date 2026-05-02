@@ -10,14 +10,28 @@ export const PhoneFrame = ({ children, className }: PhoneFrameProps) => {
   return (
     <div
       className={cn(
-        "relative mx-auto w-full max-w-[300px] rounded-[2.5rem] bg-campo p-3 shadow-mockup",
+        "relative mx-auto rounded-[3rem] bg-black p-[12px] shadow-2xl ring-1 ring-white/20 w-full",
         className,
       )}
     >
-      <div className="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-campo" />
-      <div className="overflow-hidden rounded-[2rem] bg-campo-flat">
-        {children}
+      {/* Notch */}
+      <div className="absolute left-1/2 top-0 z-50 h-6 w-32 -translate-x-1/2 rounded-b-2xl bg-black" />
+      
+      {/* Inner Screen */}
+      <div className="relative overflow-hidden rounded-[2.2rem] bg-[#06140D] aspect-[9/19]">
+        {/* Subtle Shine/Reflect */}
+        <div className="absolute inset-0 pointer-events-none z-40 bg-gradient-to-tr from-white/5 to-transparent opacity-20" />
+        <div className="h-full w-full">
+          {children}
+        </div>
       </div>
+      
+      {/* Volume Buttons */}
+      <div className="absolute -left-[2px] top-24 h-12 w-[2px] rounded-l-md bg-white/10" />
+      <div className="absolute -left-[2px] top-40 h-12 w-[2px] rounded-l-md bg-white/10" />
+      
+      {/* Power Button */}
+      <div className="absolute -right-[2px] top-32 h-16 w-[2px] rounded-r-md bg-white/10" />
     </div>
   );
 };

@@ -19,7 +19,7 @@ import { StickyMobileCTA } from "@/components/landing/StickyMobileCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-linha">
+    <div className="min-h-screen max-w-full overflow-x-hidden bg-background selection:bg-[#F7E135] selection:text-black pb-32 lg:pb-0">
       <Header />
       <main>
         <Hero />

@@ -1,6 +1,6 @@
 import carlao from "@/assets/professor-carlao.png";
 
-const falas = [
+const quotes = [
   "Craque, primeiro olha quanto dá pra jogar no mês.",
   "Assinatura esquecida também faz gol contra.",
   "Parcelamento sem controle vira campeonato longo.",
@@ -9,41 +9,32 @@ const falas = [
 
 export const CarlaoSection = () => {
   return (
-    <section className="relative overflow-hidden bg-linha py-20 lg:py-28">
-      <div className="container grid items-center gap-12 lg:grid-cols-[1fr_1.2fr]">
-        <div className="relative mx-auto">
-          <div className="absolute inset-0 -z-10 mx-auto h-[380px] w-[380px] rounded-full bg-apito/30 blur-3xl" />
-          <div className="rounded-[2rem] border-4 border-campo bg-apito-gradient p-2">
-            <img
-              src={carlao}
-              alt="Professor Carlão, técnico raiz com bigode grisalho, óculos escuros, blazer e cachecol tático"
-              className="w-full max-w-sm rounded-[1.6rem] bg-linha"
-            />
+    <section className="relative overflow-hidden bg-campo py-24 lg:py-40">
+      <div className="absolute inset-0 field-lines opacity-[0.03]" />
+      <div className="container relative z-10 max-w-7xl">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-32">
+          <div className="w-full max-w-[200px] sm:max-w-[280px] lg:max-w-[500px]">
+            <div className="relative">
+              <div className="absolute -inset-10 -z-10 bg-apito/20 blur-[60px] rounded-full animate-pulse sm:blur-[100px]" />
+              <img src={carlao} alt="Professor Carlão" className="w-full drop-shadow-[0_20px_60px_rgba(247,225,53,0.3)] transition-transform hover:scale-105 duration-700" />
+            </div>
           </div>
-        </div>
-
-        <div>
-          <span className="inline-block rounded-full bg-campo px-3 py-1 text-xs font-bold uppercase tracking-wider text-apito">
-            O Professor Carlão
-          </span>
-          <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl lg:text-6xl">
-            O técnico que <br />
-            <span className="text-apito-deep">faltava no seu dinheiro</span>.
-          </h2>
-          <p className="mt-5 text-lg text-muted-foreground">
-            Sabe aquele técnico raiz que não complica o jogo, fala o que precisa ser feito e mostra onde o time está errando? Essa é a ideia do Carlão. Linguagem simples, visão de placar, zero papo difícil.
-          </p>
-
-          <div className="mt-8 space-y-3">
-            {falas.map((f, i) => (
-              <div key={i} className="relative rounded-2xl rounded-bl-sm bg-campo p-4 text-linha shadow-card-soft">
-                <p className="text-sm leading-relaxed">
-                  <span className="text-apito">"</span>
-                  {f}
-                  <span className="text-apito">"</span>
-                </p>
-              </div>
-            ))}
+          <div className="flex-1 text-center lg:text-left">
+            <span className="inline-block rounded-full bg-apito/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-apito">
+              O Professor
+            </span>
+            <h2 className="mt-6 font-display text-3xl text-white sm:text-7xl lg:text-8xl leading-tight sm:mt-8">
+              O técnico que faltava <br />
+              <span className="text-apito">no seu dinheiro.</span>
+            </h2>
+            
+            <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-6">
+              {quotes.map((q, i) => (
+                <div key={i} className="rounded-[1.5rem] bg-white/5 p-4 border border-white/10 transition-all hover:bg-white/10 hover:translate-x-2 sm:rounded-[2rem] sm:p-8">
+                  <p className="text-lg font-medium text-white italic sm:text-xl lg:text-2xl">"{q}"</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,55 +1,34 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import carlao from "@/assets/professor-carlao.png";
 
 export const FinalCTASection = () => {
   return (
-    <section className="relative overflow-hidden bg-campo py-20 text-linha lg:py-28">
-      <div className="absolute inset-0 opacity-[0.08] field-lines" />
-      <div className="absolute left-1/2 top-0 -z-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-apito/20 blur-3xl" />
-
-      <div className="container relative grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
-        <div>
-          <span className="inline-block rounded-full bg-apito px-3 py-1 text-xs font-bold uppercase tracking-wider text-campo">
-            Apito final
-          </span>
-          <h2 className="mt-4 font-display text-5xl leading-[0.95] sm:text-6xl lg:text-7xl">
-            O mês já tá rolando.
-            <br />
-            Vai jogar <span className="text-apito">sem olhar o placar</span>?
-          </h2>
-          <p className="mt-5 max-w-xl text-lg text-linha/80">
-            Crie sua conta grátis e veja, em poucos minutos, como tá o jogo do seu dinheiro.
-          </p>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button asChild variant="apito" size="xl" className="rounded-full">
-              <a href="#cadastro">
-                Criar minha conta grátis <ArrowRight className="h-5 w-5" />
-              </a>
-            </Button>
+    <section className="relative overflow-hidden bg-campo py-16 sm:py-24 lg:py-40">
+      <div className="absolute inset-0 field-lines opacity-[0.03]" />
+      <div className="container relative z-10 max-w-6xl">
+        <div className="flex flex-col items-center gap-10 text-center lg:flex-row lg:text-left lg:gap-24">
+          <div className="w-full max-w-[200px] lg:max-w-[380px] shrink-0 sm:max-w-[240px]">
+            <div className="relative">
+              <div className="absolute -inset-10 -z-10 bg-apito/20 blur-[60px] rounded-full animate-pulse sm:blur-[80px]" />
+              <img src={carlao} alt="Professor Carlão" className="w-full drop-shadow-[0_20px_50px_rgba(247,225,53,0.4)] transition-transform duration-500 hover:scale-105" />
+            </div>
           </div>
-          <p className="mt-4 text-xs text-linha/60">
-            Sem cartão. Sem compromisso.
-          </p>
-
-          <div className="mt-10 max-w-md rounded-2xl rounded-bl-sm bg-campo-2 p-4 text-linha">
-            <p className="text-base">
-              <span className="text-apito">"</span>
-              Bora arrumar esse meio-campo financeiro antes do apito final.
-              <span className="text-apito">"</span>
+          <div className="flex-1">
+            <h2 className="font-display text-3xl text-white sm:text-7xl lg:text-8xl leading-[1.05]">
+              O mês já tá rolando. <br />
+              <span className="text-apito">Vai jogar sem olhar o placar?</span>
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-white/80 lg:text-2xl font-medium sm:mt-10 sm:text-xl">
+              Crie sua conta grátis e veja em poucos minutos como está o jogo do seu dinheiro.
             </p>
-            <p className="mt-1 text-xs text-linha/60">— Professor Carlão</p>
+            <div className="mt-10 sm:mt-12">
+              <Button asChild variant="apito" size="xl" className="h-16 w-full sm:w-auto rounded-full px-12 text-lg font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-[84px] sm:px-16 sm:text-2xl">
+                <a href="#cadastro">
+                  Criar minha conta grátis
+                </a>
+              </Button>
+            </div>
           </div>
-        </div>
-
-        <div className="relative mx-auto mt-10 lg:mt-0">
-          <div className="absolute inset-0 -z-10 h-full w-full rounded-full bg-apito/20 blur-3xl" />
-          <img
-            src={carlao}
-            alt="Professor Carlão"
-            className="w-full max-w-[240px] drop-shadow-2xl grayscale-[0.2]"
-          />
         </div>
       </div>
     </section>

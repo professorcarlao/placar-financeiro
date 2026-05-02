@@ -1,53 +1,55 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { NovoLanceDrawerMockup } from "./mockups/NovoLanceDrawerMockup";
 import { PhoneFrame } from "./PhoneFrame";
-
-const pontos = [
-  "Gol a Favor ou Gol Contra",
-  "Descrição, valor e data",
-  "Pronto: o lance entra no jogo",
-];
+import { Button } from "@/components/ui/button";
+import { PlusCircle } from "lucide-react";
 
 export const RegistroSimplesSection = () => {
   return (
-    <section className="relative bg-muted py-16 lg:py-20">
-      <div className="container grid items-center gap-10 lg:grid-cols-[1.1fr_1fr]">
-        <div>
-          <span className="inline-block rounded-full bg-campo px-3 py-1 text-xs font-bold uppercase tracking-wider text-apito">
-            Simples assim
-          </span>
-          <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl">
-            Registrar um lance <br />
-            <span className="text-apito-deep">não precisa virar planilha</span>.
-          </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Você escolhe se foi Gol a Favor ou Gol Contra, coloca descrição, valor e data. O placar atualiza sozinho.
-          </p>
+    <section className="bg-linha py-16 sm:py-20 lg:py-28">
+      <div className="container max-w-7xl">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <span className="inline-block rounded-full bg-campo/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
+              Praticidade
+            </span>
+            <h2 className="mt-6 font-display text-3xl text-campo sm:text-5xl lg:text-6xl sm:mt-8">
+              Registrar um lance não <br />
+              <span className="text-gramado">precisa virar planilha.</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground lg:text-xl sm:mt-6 sm:text-lg">
+              Você escolhe o tipo do lance, coloca descrição, valor e data. O resto entra no placar automaticamente, sem esforço.
+            </p>
 
-          <ul className="mt-5 space-y-2">
-            {pontos.map((p, i) => (
-              <li key={i} className="flex items-center gap-2 text-sm text-campo">
-                <CheckCircle2 className="h-4 w-4 text-apito-deep" />
-                {p}
-              </li>
-            ))}
-          </ul>
-
-          <Button asChild variant="apito" size="lg" className="mt-7 rounded-full">
-            <a href="#cadastro">
-              Ver meu placar grátis <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-[300px]">
-          <div className="absolute inset-0 -z-10 mx-auto h-[400px] w-[400px] -translate-y-10 rounded-full bg-apito/20 blur-3xl" />
-          <PhoneFrame>
-            <div className="p-4 bg-campo-flat h-full min-h-[320px]">
-              <NovoLanceDrawerMockup />
+            <div className="mt-10 flex flex-col gap-6 sm:mt-12">
+              <div className="flex items-start gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-campo/5 text-campo">
+                  <PlusCircle className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-display text-xl text-campo">Rápido e Direto</p>
+                  <p className="text-sm text-muted-foreground">Nada de formulários infinitos. Apenas o essencial para o seu placar.</p>
+                </div>
+              </div>
             </div>
-          </PhoneFrame>
+
+            <Button asChild variant="apito" size="xl" className="mt-10 h-14 rounded-full px-10 text-lg font-black shadow-apito transition-transform hover:scale-105 active:scale-95 sm:mt-12 sm:h-16">
+              <a href="#cadastro">
+                Começar pelo Placar do Mês
+              </a>
+            </Button>
+          </div>
+
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute -inset-10 -z-10 bg-campo/5 blur-[100px] rounded-full" />
+              <PhoneFrame className="phone-mockup-lg shadow-2xl">
+                <img 
+                  src="/assets/app-screenshots/gol-contra-lance.png" 
+                  alt="Registro de Lance" 
+                  className="w-full h-full object-cover"
+                />
+              </PhoneFrame>
+            </div>
+          </div>
         </div>
       </div>
     </section>

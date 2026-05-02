@@ -1,66 +1,55 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, LayoutDashboard, ListChecks, UserPlus } from "lucide-react";
+import { CheckCircle2, UserPlus, Zap } from "lucide-react";
 
-const passos = [
-  {
-    icon: UserPlus,
-    title: "Crie sua conta",
-    desc: "Sem cartão. Sem cadastro infinito.",
-  },
-  {
-    icon: ListChecks,
-    title: "Registre alguns lances",
-    desc: "Salário, mercado, contas. O que tiver na cabeça.",
-  },
-  {
-    icon: LayoutDashboard,
-    title: "Veja o Placar do Mês",
-    desc: "Entenda o que entrou, saiu e quanto ainda dá pra jogar.",
-  },
+const benefits = [
+  { icon: UserPlus, text: "Crie sua conta" },
+  { icon: CheckCircle2, text: "Registre lances" },
+  { icon: Zap, text: "Veja seu placar" },
 ];
 
 export const ActivationSection = () => {
   return (
-    <section id="cadastro" className="relative bg-muted py-16 lg:py-20">
-      <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-block rounded-full bg-apito px-3 py-1 text-xs font-bold uppercase tracking-wider text-campo">
-            Entrar em campo
+    <section id="cadastro" className="relative bg-linha py-16 sm:py-24 lg:py-40">
+      <div className="container relative z-10 max-w-5xl">
+        <div className="rounded-[2.5rem] bg-white p-8 text-center border border-border shadow-2xl sm:rounded-[4rem] sm:p-16 lg:p-24">
+          <span className="inline-block rounded-full bg-campo/5 px-6 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
+            Comece agora
           </span>
-          <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl">
-            Crie sua conta grátis e veja
-            <br />
-            seu <span className="text-apito-deep">placar por dentro</span>.
+          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-8xl leading-tight sm:mt-8">
+            Crie sua conta grátis e veja <br />
+            <span className="text-gramado">seu placar por dentro.</span>
           </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Em poucos minutos, você já entende o jogo do mês. Seu primeiro passo não é decidir nada — é enxergar o placar.
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground lg:text-2xl font-medium sm:mt-8 sm:text-lg">
+            Você não precisa decidir nada agora. Entre no app, registre seus primeiros lances e entenda se o jeito do Carlão combina com sua rotina.
           </p>
-        </div>
 
-        <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
-          {passos.map((c, i) => {
-            const Icon = c.icon;
-            return (
-              <div key={i} className="rounded-2xl border border-border bg-card p-5 shadow-card-soft">
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-campo text-apito">
-                  <Icon className="h-5 w-5" />
+          <div className="mt-10 flex flex-wrap justify-center gap-6 sm:mt-16 sm:gap-12">
+            {benefits.map((b, i) => {
+              const Icon = b.icon;
+              return (
+                <div key={i} className="flex items-center gap-3 sm:gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-campo/5 text-campo">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <span className="text-sm font-bold text-campo sm:text-base">{b.text}</span>
                 </div>
-                <p className="font-display text-lg text-campo">{c.title}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
-        <div className="mx-auto mt-10 max-w-md text-center">
-          <Button asChild variant="apito" size="xl" className="w-full rounded-full">
-            <a href="#cadastro" aria-label="Criar minha conta grátis">
-              Criar minha conta grátis <ArrowRight className="h-5 w-5" />
-            </a>
-          </Button>
-          <p className="mt-3 text-xs text-muted-foreground">
-            Sem cartão. Sem compromisso.
-          </p>
+          <div className="mt-12 flex flex-col items-center gap-6 sm:mt-16 sm:gap-8">
+            <Button asChild variant="apito" size="xl" className="h-14 w-full sm:w-auto rounded-full px-8 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-[84px] sm:px-16 sm:text-2xl">
+              <a href="#">
+                Criar minha conta grátis
+              </a>
+            </Button>
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-gramado animate-pulse" />
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-campo/40 sm:text-[11px]">
+                Sem cartão para começar
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

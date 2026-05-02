@@ -1,57 +1,56 @@
-import { User } from "lucide-react";
+import { User, Quote } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
     name: "Marina R.",
-    context: "Sempre se perdia em planilhas",
-    quote: "Finalmente consegui ver para onde meu dinheiro estava indo sem me perder em planilha. O visual de placar mudou tudo.",
+    text: "Finalmente consegui ver para onde meu dinheiro estava indo sem me perder em planilha.",
+    role: "Usuária do App",
   },
   {
     name: "Carlos M.",
-    context: "Precisava de rapidez no dia a dia",
-    quote: "O placar do mês me ajudou a entender rápido quanto ainda dava pra gastar sem susto. É muito direto ao ponto.",
+    text: "O placar do mês me ajudou a entender rápido quanto ainda dava pra gastar sem susto.",
+    role: "Usuário do App",
   },
   {
     name: "Juliana S.",
-    context: "Gastos que passavam batidos",
-    quote: "Gostei porque ficou muito mais fácil acompanhar meus objetivos e os gastos que sempre passavam batidos no fim do mês.",
+    text: "Gostei porque ficou mais fácil acompanhar meus objetivos e gastos recorrentes.",
+    role: "Usuária do App",
   },
 ];
 
 export const TestimonialsSection = () => {
   return (
-    <section className="bg-linha py-16 lg:py-20">
-      <div className="container">
+    <section className="bg-background py-20 lg:py-28">
+      <div className="container max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-block rounded-full bg-apito/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-apito-deep">
-            Prova Social
+          <span className="inline-block rounded-full bg-campo/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
+            Depoimentos
           </span>
-          <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl">
-            Quem entra em campo começa a ver o <span className="text-apito-deep">jogo com mais clareza.</span>
+          <h2 className="mt-8 font-display text-4xl text-campo sm:text-5xl lg:text-6xl">
+            Quem entra em campo <br />
+            <span className="text-gramado">começa a ver o jogo.</span>
           </h2>
-          <p className="mt-3 text-base text-muted-foreground">
-            Algumas percepções de quem começou a organizar o mês com o Carlão.
-          </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="flex flex-col rounded-3xl border border-border bg-card p-6 shadow-card-soft"
+              className="flex flex-col rounded-[2.5rem] bg-white p-10 border border-border shadow-sm transition-all hover:shadow-md"
             >
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-campo/5 text-campo/40">
-                  <User className="h-5 w-5" />
+              <div className="flex-1">
+                <p className="text-lg leading-relaxed text-campo font-medium italic">"{t.text}"</p>
+              </div>
+              <div className="mt-8 flex items-center gap-4">
+                <div className="h-10 w-10 rounded-full bg-campo/10 flex items-center justify-center text-campo">
+                    <User className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-display text-base text-campo">{t.name}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{t.context}</p>
+                  <p className="font-display text-xl text-campo">{t.name}</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">{t.role}</p>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-muted-foreground italic">
-                "{t.quote}"
-              </p>
             </div>
           ))}
         </div>

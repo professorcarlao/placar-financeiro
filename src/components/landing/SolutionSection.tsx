@@ -1,59 +1,77 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Target, Wallet } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { PhoneFrame } from "./PhoneFrame";
-import { PlacarMockup } from "./PlacarMockup";
 
-const blocos = [
-  { icon: Wallet, title: "Quanto dá pra jogar", desc: "O número principal do mês.", tone: "text-apito-deep bg-apito/15" },
-  { icon: ArrowUpRight, title: "Entrou no jogo", desc: "Salário, renda extra, recebimentos.", tone: "text-gramado bg-gramado/10" },
-  { icon: ArrowDownRight, title: "Saiu do jogo", desc: "Contas, cartão, mercado, delivery.", tone: "text-cartao-vermelho bg-cartao-vermelho/10" },
-  { icon: Target, title: "Para objetivos", desc: "Reserva, viagem, dívida, qualquer meta.", tone: "text-apito-deep bg-apito/15" },
+const features = [
+  {
+    title: "Quanto dá pra jogar",
+    desc: "Veja quanto ainda sobra para usar sem entrar no sufoco.",
+  },
+  {
+    title: "Entrou no jogo",
+    desc: "Tudo que entrou no mês aparece como ponto a favor.",
+  },
+  {
+    title: "Saiu do jogo",
+    desc: "Contas, mercado e lazer aparecem como saídas.",
+  },
+  {
+    title: "Objetivos em dia",
+    desc: "Metas aparecem no placar para não serem esquecidas.",
+  },
 ];
 
 export const SolutionSection = () => {
   return (
-    <section className="relative bg-muted py-16 lg:py-20">
-      <div className="container grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
-        <div>
-          <span className="inline-block rounded-full bg-campo px-3 py-1 text-xs font-bold uppercase tracking-wider text-apito">
-            A solução
-          </span>
-          <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl">
-            Cara de <span className="text-apito-deep">placar</span>.
-            <br />
-            Não cara de planilha.
-          </h2>
-          <p className="mt-4 text-base text-muted-foreground">
-            Você registra os lances, acompanha o placar e entende rápido se o mês está sob controle ou se precisa ajustar a marcação.
-          </p>
+    <section className="relative overflow-hidden bg-campo py-16 sm:py-24 lg:py-40">
+      <div className="absolute inset-0 field-lines opacity-[0.03]" />
+      <div className="container relative z-10 max-w-7xl">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-32">
+          <div>
+            <span className="inline-block rounded-full bg-apito/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-apito">
+              A Solução
+            </span>
+            <h2 className="mt-6 font-display text-3xl text-white sm:text-6xl lg:text-8xl leading-tight sm:mt-8">
+              Cara de placar, <br />
+              <span className="text-apito">não de planilha.</span>
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-white/70 lg:text-2xl font-medium sm:mt-8 sm:text-xl">
+              O app mostra o que realmente importa para o seu bolso hoje. Uma visão direta e visual do seu jogo financeiro.
+            </p>
 
-          <div className="mt-6 grid gap-2.5 sm:grid-cols-2">
-            {blocos.map((b, i) => {
-              const Icon = b.icon;
-              return (
-                <div key={i} className="rounded-xl border border-border bg-card p-3 shadow-card-soft">
-                  <div className={`mb-1.5 inline-flex h-8 w-8 items-center justify-center rounded-lg ${b.tone}`}>
-                    <Icon className="h-4 w-4" />
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-10">
+              {features.map((f, i) => (
+                <div key={i} className="flex flex-col gap-2 sm:gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-apito/10 text-apito">
+                    <CheckCircle2 className="h-6 w-6" />
                   </div>
-                  <p className="font-display text-base text-campo">{b.title}</p>
-                  <p className="text-xs text-muted-foreground">{b.desc}</p>
+                  <div>
+                    <p className="font-display text-xl text-white leading-tight sm:text-2xl lg:text-3xl">{f.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-white/40 font-medium sm:mt-2 sm:text-base">{f.desc}</p>
+                  </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
+
+            <Button asChild variant="apito" size="xl" className="mt-10 h-14 w-full sm:w-auto rounded-full px-10 text-lg font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:mt-12 sm:h-20 sm:px-16 sm:text-xl">
+              <a href="#cadastro">
+                Ver meu placar grátis
+              </a>
+            </Button>
           </div>
 
-          <Button asChild variant="apito" size="lg" className="mt-6 rounded-full">
-            <a href="#cadastro">
-              Ver meu placar grátis <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-[300px]">
-          <div className="absolute inset-0 -z-10 mx-auto h-[400px] w-[400px] -translate-y-10 rounded-full bg-apito/20 blur-3xl" />
-          <PhoneFrame>
-            <PlacarMockup />
-          </PhoneFrame>
+          <div className="relative flex justify-center lg:justify-end w-full overflow-hidden sm:overflow-visible">
+            <div className="relative w-full max-w-[260px] sm:max-w-[400px] lg:max-w-[480px]">
+              <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:-inset-20 sm:blur-[120px]" />
+              <PhoneFrame className="shadow-2xl ring-4 ring-white/10">
+                <img 
+                  src="/assets/app-screenshots/placar-do-mes.png" 
+                  alt="Placar do Mês" 
+                  className="w-full h-full object-cover"
+                />
+              </PhoneFrame>
+            </div>
+          </div>
         </div>
       </div>
     </section>

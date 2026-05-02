@@ -2,109 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Finanças em Campo — design tokens */
     --background: 0 0% 100%;
-    --foreground: 145 55% 8%;
+    --foreground: 145 45% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 145 55% 8%;
+    --card-foreground: 145 45% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 145 55% 8%;
+    --popover-foreground: 145 45% 4%;
 
-    /* Verde campo — primary */
-    --primary: 145 55% 12%;
+    --primary: 145 45% 4%;
     --primary-foreground: 0 0% 100%;
 
-    /* Amarelo apito — secondary/CTA */
-    --secondary: 48 100% 55%;
-    --secondary-foreground: 145 55% 12%;
+    --secondary: 145 25% 96%;
+    --secondary-foreground: 145 45% 4%;
 
-    --muted: 145 15% 95%;
-    --muted-foreground: 145 10% 35%;
+    --muted: 145 10% 95%;
+    --muted-foreground: 145 10% 40%;
 
-    --accent: 48 100% 55%;
-    --accent-foreground: 145 55% 12%;
+    --accent: 53 92% 59%;
+    --accent-foreground: 145 45% 4%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 145 15% 88%;
-    --input: 145 15% 88%;
-    --ring: 145 55% 12%;
+    --border: 145 20% 90%;
+    --input: 145 20% 90%;
+    --ring: 145 45% 4%;
 
-    --radius: 1rem;
+    --radius: 1.5rem;
 
     /* Domain tokens */
-    --campo: 145 55% 12%;
-    --campo-2: 145 45% 18%;
-    --campo-3: 145 40% 22%;
-    --gramado: 140 35% 30%;
-    --gramado-line: 140 30% 45%;
-    --apito: 48 100% 55%;
-    --apito-glow: 48 100% 65%;
-    --apito-deep: 42 95% 48%;
-    --linha: 0 0% 100%;
-    --cartao-amarelo: 45 95% 55%;
-    --cartao-vermelho: 0 75% 55%;
+    --campo: 145 45% 4%;
+    --campo-2: 145 35% 8%;
+    --campo-3: 145 25% 12%;
+    --gramado: 145 70% 39%;
+    --apito: 53 92% 59%;
+    --apito-deep: 53 92% 45%;
+    --linha: 145 25% 97%;
+    --cartao-amarelo: 53 92% 59%;
+    --cartao-vermelho: 0 84% 60%;
 
-    --gradient-campo: radial-gradient(ellipse at top, hsl(var(--campo-3)) 0%, hsl(var(--campo)) 60%, hsl(145 60% 6%) 100%);
-    --gradient-apito: linear-gradient(135deg, hsl(var(--apito-glow)), hsl(var(--apito-deep)));
-    --shadow-card: 0 10px 40px -12px hsl(145 55% 8% / 0.25);
-    --shadow-apito: 0 12px 40px -10px hsl(var(--apito) / 0.55);
-    --shadow-mockup: 0 30px 80px -20px hsl(145 60% 4% / 0.6);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 145 55% 8%;
-    --foreground: 0 0% 98%;
-    --card: 145 50% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 145 50% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 48 100% 55%;
-    --primary-foreground: 145 55% 12%;
-    --secondary: 145 40% 22%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 145 30% 18%;
-    --muted-foreground: 145 10% 70%;
-    --accent: 48 100% 55%;
-    --accent-foreground: 145 55% 12%;
-    --destructive: 0 75% 55%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 145 30% 22%;
-    --input: 145 30% 22%;
-    --ring: 48 100% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-campo: linear-gradient(180deg, hsl(var(--campo)) 0%, hsl(145 40% 6%) 100%);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.04);
+    --shadow-apito: 0 10px 30px -5px hsla(var(--apito), 0.4);
+    --shadow-mockup: 0 40px 100px -20px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -142,8 +86,8 @@ All colors MUST be HSL.
   .bg-campo-3-flat {
     background-color: hsl(var(--campo-3));
   }
-  .bg-apito-gradient {
-    background: var(--gradient-apito);
+  .bg-linha {
+    background-color: hsl(var(--linha));
   }
   .shadow-mockup {
     box-shadow: var(--shadow-mockup);
@@ -156,14 +100,14 @@ All colors MUST be HSL.
   }
   .field-lines {
     background-image:
-      radial-gradient(ellipse at center, transparent 55%, hsl(var(--gramado-line) / 0.18) 56%, transparent 57%),
-      linear-gradient(to right, transparent 49.5%, hsl(var(--gramado-line) / 0.15) 50%, transparent 50.5%),
+      radial-gradient(ellipse at center, transparent 55%, rgba(255,255,255, 0.05) 56%, transparent 57%),
+      linear-gradient(to right, transparent 49.5%, rgba(255,255,255, 0.05) 50%, transparent 50.5%),
       repeating-linear-gradient(
         to right,
-        hsl(var(--campo)) 0px,
-        hsl(var(--campo)) 60px,
-        hsl(var(--campo-2)) 60px,
-        hsl(var(--campo-2)) 120px
+        rgba(255,255,255, 0) 0px,
+        rgba(255,255,255, 0) 60px,
+        rgba(255,255,255, 0.02) 60px,
+        rgba(255,255,255, 0.02) 120px
       );
   }
 }
@@ -183,7 +127,13 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .bg-offwhite-campo {
-    background-color: hsl(145 25% 97%);
+  .phone-mockup-lg {
+    @apply max-w-[260px] md:max-w-[320px] w-full;
+  }
+  .phone-mockup-md {
+    @apply max-w-[220px] md:max-w-[240px] w-full;
+  }
+  .phone-mockup-sm {
+    @apply max-w-[160px] md:max-w-[180px] w-full;
   }
 }

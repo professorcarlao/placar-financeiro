@@ -1,121 +1,78 @@
-import { Bell, Sparkles, Target, TrendingUp } from "lucide-react";
-import carlao from "@/assets/professor-carlao.png";
-import { EstatisticasMockup } from "./mockups/EstatisticasMockup";
 import { PhoneFrame } from "./PhoneFrame";
-import { PlacarMockup } from "./PlacarMockup";
+import carlao from "@/assets/professor-carlao.png";
+import { Sparkles } from "lucide-react";
+
+const benefits = [
+  {
+    title: "Clareza para o mês atual",
+    desc: "O Placar do Mês mostra na hora se o jogo está sob controle ou se você precisa recuar.",
+    image: "/assets/app-screenshots/placar-do-mes.png",
+    isApp: true,
+  },
+  {
+    title: "Objetivos visíveis",
+    desc: "Suas metas não ficam esquecidas no meio da bagunça. O progresso é visual e diário.",
+    image: "/assets/app-screenshots/Objetivos.png",
+    isApp: true,
+  },
+  {
+    title: "Insights do Carlão",
+    desc: "O app traz leituras e insights rápidos sobre o seu mês, para te ajudar a entender o que está pesando no jogo.",
+    image: carlao,
+    isApp: false,
+  },
+  {
+    title: "Estatísticas diretas",
+    desc: "Veja o que mais pesou no seu bolso de forma visual, rápida e sem complicação.",
+    image: "/assets/app-screenshots/estatisticas.png",
+    isApp: true,
+  },
+];
 
 export const BenefitsSection = () => {
   return (
-    <section className="relative bg-linha py-16 lg:py-20">
-      <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-block rounded-full bg-apito/20 px-3 py-1 text-xs font-bold uppercase tracking-wider text-apito-deep">
+    <section className="bg-linha py-16 sm:py-24 lg:py-32">
+      <div className="container max-w-7xl">
+        <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16">
+          <span className="inline-block rounded-full bg-campo/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
             Benefícios
           </span>
-          <h2 className="mt-4 font-display text-4xl text-campo sm:text-5xl">
-            Organização sem cara de <span className="text-cartao-vermelho">castigo</span>.
+          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-7xl leading-tight sm:mt-8">
+            O técnico que faltava <br />
+            <span className="text-gramado">no seu dinheiro.</span>
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {/* 1 — Clareza */}
-          <article className="flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card-soft lg:p-8">
-            <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-apito text-campo">
-                <Sparkles className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="font-display text-xl text-campo">Clareza pro mês atual</h3>
-                <p className="mt-1 text-sm text-muted-foreground">O Placar do Mês coloca o que importa na sua frente.</p>
-              </div>
-            </div>
-            <div className="mt-auto flex justify-center">
-              <PhoneFrame className="max-w-[240px] scale-95 origin-bottom transition-none">
-                <PlacarMockup />
-              </PhoneFrame>
-            </div>
-          </article>
-
-          {/* 2 — Objetivos */}
-          <article className="flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card-soft lg:p-8">
-            <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gramado/15 text-gramado">
-                <Target className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="font-display text-xl text-campo">Objetivos que não somem</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Veja o progresso de cada meta avançando rumo ao gol.</p>
-              </div>
-            </div>
-            <div className="mt-auto flex justify-center">
-              <PhoneFrame className="max-w-[240px] scale-95 origin-bottom transition-none">
-                <div className="p-4 bg-campo-flat h-full min-h-[300px]">
-                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-wider text-linha/55">Seus objetivos</p>
-                  <MetaBar label="Reserva de emergência" value="R$ 10.500 / R$ 30.000" pct={35} />
-                  <div className="mt-4"><MetaBar label="Quitar cartão" value="R$ 700 / R$ 1.200" pct={58} /></div>
-                  <div className="mt-4"><MetaBar label="Viagem em julho" value="R$ 420 / R$ 2.000" pct={21} /></div>
-                  <div className="mt-6 rounded-lg bg-apito/10 border border-apito/20 p-2 text-center">
-                    <p className="text-[10px] text-apito-deep font-bold">Faltam 12 gols para a reserva</p>
+        <div className="grid gap-3 sm:gap-8 md:grid-cols-2">
+          {benefits.map((b, i) => (
+            <div
+              key={i}
+              className="group flex flex-col items-center gap-4 rounded-[2rem] bg-white p-5 shadow-card-soft border border-border transition-all hover:shadow-xl sm:p-10 lg:flex-row lg:gap-10 lg:p-12"
+            >
+              <div className="w-full max-w-[120px] shrink-0 sm:max-w-[180px]">
+                {b.isApp ? (
+                  <PhoneFrame className="shadow-xl">
+                    <img src={b.image} alt={b.title} className="h-full w-full object-cover" />
+                  </PhoneFrame>
+                ) : (
+                  <div className="relative overflow-hidden rounded-[2rem] border-4 border-apito/20 bg-apito/5 p-2 aspect-[9/19]">
+                    <img src={b.image} alt={b.title} className="w-full h-full object-cover rounded-[1.5rem] grayscale transition-all group-hover:grayscale-0" />
+                    <div className="absolute right-2 bottom-2 flex h-8 w-8 items-center justify-center rounded-full bg-apito text-campo shadow-lg sm:h-10 sm:w-10">
+                      <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
+                    </div>
                   </div>
-                </div>
-              </PhoneFrame>
-            </div>
-          </article>
-
-          {/* 3 — Alertas */}
-          <article className="flex flex-col relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card-soft lg:p-8">
-            <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cartao-amarelo/20 text-apito-deep">
-                <Bell className="h-5 w-5" />
+                )}
               </div>
-              <div>
-                <h3 className="font-display text-xl text-campo">Alertas do Carlão</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Sem sermão. O técnico fala direto.</p>
-              </div>
-            </div>
-            <div className="mt-auto flex items-end gap-3 pb-4">
-              <img src={carlao} alt="Professor Carlão" className="h-20 w-20 shrink-0 object-contain grayscale-[0.2]" />
-              <div className="relative flex-1 rounded-2xl rounded-bl-sm bg-campo-flat p-4 text-linha">
-                <p className="text-sm">
-                  <span className="text-apito">Ô, craque…</span> assinatura esquecida também faz gol contra. Confere as recorrentes.
+              <div className="flex-1 text-center lg:text-left">
+                <p className="font-display text-xl text-campo leading-tight sm:text-2xl lg:text-3xl">{b.title}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground font-medium sm:mt-4 sm:text-base">
+                  {b.desc}
                 </p>
-                <p className="mt-1 text-[11px] text-linha/60">Aviso do Carlão · há 2h</p>
               </div>
             </div>
-          </article>
-
-          {/* 4 — Estatísticas */}
-          <article className="flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card-soft lg:p-8">
-            <div className="mb-8 flex items-start gap-4">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-campo text-apito">
-                <TrendingUp className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="font-display text-xl text-campo">Outro ângulo do jogo</h3>
-                <p className="mt-1 text-sm text-muted-foreground">Padrões do mês: setores que pesam e evolução.</p>
-              </div>
-            </div>
-            <div className="mt-auto flex justify-center">
-              <PhoneFrame className="max-w-[240px] scale-95 origin-bottom transition-none">
-                <EstatisticasMockup />
-              </PhoneFrame>
-            </div>
-          </article>
+          ))}
         </div>
       </div>
     </section>
   );
 };
-
-
-const MetaBar = ({ label, value, pct }: { label: string; value: string; pct: number }) => (
-  <div>
-    <div className="mb-1 flex items-baseline justify-between text-[11px]">
-      <span className="font-semibold text-linha">{label}</span>
-      <span className="text-linha/55">{value}</span>
-    </div>
-    <div className="h-1.5 overflow-hidden rounded-full bg-linha/10">
-      <div className="h-full rounded-full bg-apito-gradient" style={{ width: `${pct}%` }} />
-    </div>
-  </div>
-);

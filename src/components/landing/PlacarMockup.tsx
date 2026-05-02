@@ -1,80 +1,113 @@
-import { ArrowDownRight, ArrowUpRight, Clock, Target } from "lucide-react";
+import { cn } from "@/lib/utils";
+import carlao from "@/assets/professor-carlao.png";
+import { Eye, Moon, Share2, ChevronLeft, ChevronRight, LayoutGrid, ListChecks, BarChart2, Target, Settings, Plus, Activity } from "lucide-react";
 
 export const PlacarMockup = () => {
   return (
-    <div className="bg-campo-flat px-4 pb-4 pt-8 text-linha">
-      {/* Header */}
-      <div className="mb-3 flex items-center justify-between">
-        <div>
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-linha/55">
-            Placar do Mês
-          </p>
-          <p className="font-display text-xl text-linha">Novembro</p>
-        </div>
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-apito-gradient text-campo">
-          <span className="text-xs font-bold">C</span>
-        </div>
-      </div>
-
-      {/* Big number */}
-      <div className="mb-3 rounded-2xl border border-linha/10 bg-campo-2-flat p-4">
-        <p className="text-[10px] uppercase tracking-wider text-linha/55">
-          Quanto dá pra jogar no mês
-        </p>
-        <p className="font-display text-3xl text-apito">R$ 1.240</p>
-        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-linha/10">
-          <div
-            className="h-full rounded-full bg-apito-gradient"
-            style={{ width: '62%' }}
-          />
-        </div>
-        <p className="mt-1 text-[9px] text-linha/45">12 dias restantes</p>
-      </div>
-
-      {/* 2x2 grid de cards reais */}
-      <div className="grid grid-cols-2 gap-2">
-        <MiniCard icon={<ArrowUpRight className="h-3 w-3" />} label="Entrou no jogo" value="4.800" tone="green" />
-        <MiniCard icon={<ArrowDownRight className="h-3 w-3" />} label="Saiu do jogo" value="3.100" tone="red" />
-        <MiniCard icon={<Target className="h-3 w-3" />} label="Separado p/ objetivos" value="450" tone="yellow" />
-        <MiniCard icon={<Clock className="h-3 w-3" />} label="Ainda vem por aí" value="620" tone="neutral" />
-      </div>
-
-      {/* Chip rodapé */}
-      <div className="mt-3 flex items-center justify-between rounded-xl border border-linha/10 bg-campo-3-flat px-3 py-2">
+    <div className="flex flex-col h-full bg-[#06140D] text-white overflow-hidden font-sans">
+      {/* Status Bar / Header */}
+      <div className="px-4 pt-3 pb-2 flex items-center justify-between border-b border-white/5">
         <div className="flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-apito" />
-          <p className="text-[10px] text-linha/80">Seus objetivos</p>
+          <div className="h-8 w-8 rounded-full border-2 border-[#F7E135]/30 overflow-hidden bg-white/10">
+            <img src={carlao} alt="User" className="h-full w-full object-cover" />
+          </div>
+          <div>
+            <div className="flex items-center gap-1.5">
+              <p className="text-[11px] font-bold">Olá, Jose</p>
+              <span>👋</span>
+            </div>
+          </div>
         </div>
-        <p className="text-[10px] font-semibold text-apito">3 ativos</p>
+        <div className="flex items-center gap-4 text-white/40">
+          <Eye className="h-4 w-4" />
+          <Moon className="h-4 w-4" />
+        </div>
+      </div>
+
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-6">
+        {/* Title & Selector */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-lg font-black">Placar do Mês</h2>
+            <p className="text-[10px] text-white/40 uppercase font-bold">Maio de 2026</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4 rounded-lg bg-white/5 px-2 py-1.5 border border-white/5">
+              <ChevronLeft className="h-4 w-4 text-white/40" />
+              <span className="text-[11px] font-bold">Mai/26</span>
+              <ChevronRight className="h-4 w-4 text-white/40" />
+            </div>
+          </div>
+        </div>
+
+        {/* Main Dashboard Card */}
+        <div className="rounded-3xl bg-[#11241B] p-6 text-center border border-white/5 relative overflow-hidden">
+          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60 mb-2">Quanto dá pra jogar no mês</p>
+          <p className="text-4xl font-black text-[#00C853] mb-3">R$ 3.840,00</p>
+          <p className="text-xs text-white/80 font-medium">Tá bonito. Ainda dá pra gastar sem susto.</p>
+          <p className="text-[10px] text-white/40 mt-1 uppercase font-bold">Restam 29 dias no mês</p>
+
+          <div className="mt-6 rounded-2xl bg-black/20 border border-[#F7E135]/20 p-3 flex items-center gap-3 text-left">
+            <Activity className="h-5 w-5 text-[#F7E135]" />
+            <p className="text-[10px] text-white/80 leading-snug">Você ainda tem espaço no mês. Dá pra seguir com calma.</p>
+          </div>
+
+          <div className="mt-6 grid grid-cols-2 gap-4 text-left border-t border-white/5 pt-4">
+            <div>
+              <p className="text-[11px] font-bold text-[#00C853]">+R$ 20.000,00</p>
+              <p className="text-[9px] text-white/30 uppercase font-bold">(entradas)</p>
+              <p className="mt-2 text-[11px] font-bold text-white/40">-R$ 500,00</p>
+              <p className="text-[9px] text-white/30 uppercase font-bold">(objetivos)</p>
+            </div>
+            <div className="text-right">
+              <p className="text-[11px] font-bold text-[#FF5252]">-R$ 5.630,00</p>
+              <p className="text-[9px] text-white/30 uppercase font-bold">(saídas)</p>
+              <p className="mt-2 text-[11px] font-bold text-[#F7E135]">-R$ 10.030,00</p>
+              <p className="text-[9px] text-white/30 uppercase font-bold">(ainda vem por aí)</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Triple Summary Cards */}
+        <div className="grid grid-cols-3 gap-3">
+          <SummarySmall icon={LayoutGrid} label="Entrou" value="R$ 20 mil" color="text-[#00C853]" />
+          <SummarySmall icon={Activity} label="Saiu" value="R$ 5.630" color="text-[#FF5252]" />
+          <SummarySmall icon={Target} label="Metas" value="R$ 500" color="text-[#F7E135]" />
+        </div>
+      </div>
+
+      {/* Floating Action Button */}
+      <div className="absolute bottom-20 right-6">
+        <div className="h-14 w-14 rounded-full bg-[#F7E135] flex items-center justify-center shadow-xl shadow-[#F7E135]/20">
+          <Plus className="h-8 w-8 text-black" strokeWidth={3} />
+        </div>
+      </div>
+
+      {/* Bottom Nav */}
+      <div className="px-4 py-3 flex items-center justify-between border-t border-white/5 bg-[#06140D]">
+        <NavItem icon={LayoutGrid} label="Placar" active />
+        <NavItem icon={ListChecks} label="Lances" />
+        <NavItem icon={BarChart2} label="Análises" />
+        <NavItem icon={Target} label="Metas" />
+        <NavItem icon={Settings} label="Vestiário" />
       </div>
     </div>
   );
 };
 
-const MiniCard = ({
-  icon,
-  label,
-  value,
-  tone,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-  tone: "green" | "red" | "yellow" | "neutral";
-}) => {
-  const tones = {
-    green: "bg-gramado/25 text-apito",
-    red: "bg-cartao-vermelho/20 text-cartao-vermelho",
-    yellow: "bg-apito/20 text-apito",
-    neutral: "bg-linha/10 text-linha/80",
-  };
-  return (
-    <div className="rounded-xl border border-linha/10 bg-campo-2-flat p-2.5">
-      <div className={`mb-1.5 inline-flex h-5 w-5 items-center justify-center rounded-md ${tones[tone]}`}>
-        {icon}
-      </div>
-      <p className="text-[9px] uppercase leading-tight text-linha/55">{label}</p>
-      <p className="font-display text-base text-linha">R$ {value}</p>
+const SummarySmall = ({ icon: Icon, label, value, color }: any) => (
+  <div className="rounded-2xl bg-[#11241B] p-3 border border-white/5">
+    <div className="mb-4 flex h-8 w-8 items-center justify-center rounded-xl bg-white/5 text-white/20">
+      <Icon className="h-4 w-4" />
     </div>
-  );
-};
+    <p className="text-[9px] font-bold text-white/40 leading-tight uppercase mb-1">{label}</p>
+    <p className={cn("text-sm font-black", color)}>{value}</p>
+  </div>
+);
+
+const NavItem = ({ icon: Icon, label, active }: any) => (
+  <div className={cn("flex flex-col items-center gap-1", active ? "text-[#F7E135]" : "text-white/40")}>
+    <Icon className="h-5 w-5" />
+    <span className="text-[9px] font-bold uppercase">{label}</span>
+  </div>
+);
