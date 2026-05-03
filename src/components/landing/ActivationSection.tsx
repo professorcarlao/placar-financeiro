@@ -15,8 +15,9 @@ export const ActivationSection = () => {
           <span className="inline-block rounded-full bg-campo/5 px-6 py-2 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
             Comece agora
           </span>
-          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-8xl leading-tight sm:mt-8">
-            Crie sua conta grátis e veja <br />
+          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-8xl leading-[1.1] sm:mt-8">
+            Crie sua conta <br />
+            grátis e veja <br />
             <span className="text-gramado">seu placar por dentro.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground lg:text-2xl font-medium sm:mt-8 sm:text-lg">

@@ -36,8 +36,9 @@ export const BenefitsSection = () => {
           <span className="inline-block rounded-full bg-campo/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
             Benefícios
           </span>
-          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-7xl leading-tight sm:mt-8">
-            O técnico que faltava <br />
+          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-7xl leading-[1.1] sm:mt-8">
+            O técnico <br />
+            que faltava <br />
             <span className="text-gramado">no seu dinheiro.</span>
           </h2>
         </div>
