@@ -53,9 +53,7 @@ export const Header = () => {
         <div className="flex items-center gap-2 shrink-0 sm:gap-4">
           <Button asChild variant="apito" className="h-9 rounded-full px-3 text-[10px] font-black uppercase shadow-apito transition-transform hover:scale-105 active:scale-95 sm:h-14 sm:px-8 sm:text-sm">
             <a href="#cadastro">
-              <span className="xs:hidden">Criar</span>
-              <span className="hidden xs:inline sm:hidden">Criar conta</span>
-              <span className="hidden sm:inline">Criar conta grátis</span>
+              <span>CONTA GRÁTIS</span>
             </a>
           </Button>
         </div>
