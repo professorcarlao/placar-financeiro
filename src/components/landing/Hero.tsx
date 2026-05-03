@@ -18,7 +18,8 @@ export const Hero = () => {
         <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <h1 className="font-display text-3xl leading-[1.1] tracking-tight text-white xs:text-4xl sm:text-7xl lg:text-8xl">
-              Veja o placar do seu mês <br />
+              Veja o placar <br />
+              do seu mês <br />
               <span className="text-apito">em segundos.</span>
             </h1>
 
