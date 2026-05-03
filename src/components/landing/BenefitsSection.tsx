@@ -1,6 +1,5 @@
 import { PhoneFrame } from "./PhoneFrame";
 import carlao from "@/assets/professor-carlao.png";
-import { Sparkles } from "lucide-react";
 
 const benefits = [
   {
@@ -43,35 +42,40 @@ export const BenefitsSection = () => {
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+        <div className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {benefits.map((b, i) => (
             <div
               key={i}
-              className="group relative flex flex-col items-center gap-6 rounded-[2.5rem] bg-white p-6 shadow-card-soft border border-border transition-all hover:shadow-xl sm:p-8 lg:flex-row lg:items-center lg:gap-10 lg:p-10"
+              className="group relative flex flex-row items-center gap-4 rounded-3xl bg-white p-4 shadow-card-soft border border-border transition-all hover:shadow-xl sm:gap-5 sm:p-5"
             >
-              <div className="w-full max-w-[120px] shrink-0 sm:max-w-[140px] lg:max-w-[160px]">
+              <div className="w-[88px] shrink-0 sm:w-[104px]">
                 {b.isApp ? (
-                  <PhoneFrame minimal hideButtons className="shadow-xl">
+                  <PhoneFrame mini>
                     <img src={b.image} alt={b.title} className="h-full w-full object-cover" />
                   </PhoneFrame>
                 ) : (
-                  <div className="relative">
-                    <div className="relative overflow-hidden rounded-3xl border-2 border-apito/30 bg-apito/5 p-1 shadow-inner aspect-square">
-                      <img src={b.image} alt={b.title} className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    {/* Mini Insight Card */}
-                    <div className="absolute -right-10 -bottom-4 z-10 w-32 rounded-2xl bg-white p-3 shadow-2xl border border-border sm:-right-12 lg:-right-10">
-                      <p className="text-[8px] font-black uppercase tracking-wider text-gramado mb-1">Leitura do jogo</p>
-                      <p className="text-[10px] leading-tight font-bold text-campo">Seu mês está sob controle.</p>
-                    </div>
+                  <div className="aspect-square overflow-hidden rounded-2xl border-2 border-apito/40 bg-apito/10 shadow-sm">
+                    <img src={b.image} alt={b.title} className="h-full w-full object-cover" />
                   </div>
                 )}
               </div>
-              <div className="flex-1 text-center lg:text-left">
-                <h3 className="font-display text-2xl text-campo leading-tight sm:text-3xl lg:text-4xl">{b.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-medium sm:text-base lg:max-w-[320px]">
+              <div className="flex-1 min-w-0">
+                <h3 className="font-display text-xl text-campo leading-tight sm:text-2xl lg:text-3xl">
+                  {b.title}
+                </h3>
+                <p className="mt-2 text-sm leading-snug text-muted-foreground font-medium">
                   {b.desc}
                 </p>
+                {!b.isApp && (
+                  <div className="mt-3 inline-flex flex-col rounded-xl bg-campo/5 border border-campo/10 px-3 py-2">
+                    <span className="text-[9px] font-black uppercase tracking-wider text-gramado">
+                      Leitura do jogo
+                    </span>
+                    <span className="text-xs font-bold text-campo leading-tight mt-0.5">
+                      Seu mês está sob controle, mas o crédito ainda pesa.
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
