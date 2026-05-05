@@ -67,11 +67,11 @@ export const ProblemSection = () => {
                   key={i}
                   className="group flex flex-col rounded-[22px] bg-white p-5 border border-black/5 shadow-sm transition-all hover:shadow-md sm:rounded-[28px] sm:p-8"
                 >
-                  <div className={cn("flex h-12 w-12 items-center justify-center rounded-xl border border-black/5 shadow-sm sm:h-16 sm:w-16 sm:rounded-2xl", p.iconBg, p.iconColor)}>
-                    <Icon className="h-6 w-6 sm:h-8 sm:w-8" />
+                  <div className={cn("flex h-12 w-12 items-center justify-center rounded-xl border border-black/5 shadow-sm sm:h-16 sm:w-16 sm:rounded-2xl", p.iconBg === "bg-apito/12" ? "bg-green-100" : p.iconBg, p.iconColor)}>
+                    <Icon className={cn("h-6 w-6 sm:h-8 sm:w-8", p.iconBg === "bg-apito/12" && "text-gramado")} />
                   </div>
                   <div className="mt-5 sm:mt-6">
-                    <h3 className="font-display text-lg leading-none tracking-tight text-campo uppercase sm:text-2xl lg:text-[30px]">
+                    <h3 className="font-display text-lg leading-none tracking-tight uppercase sm:text-2xl lg:text-[30px] text-gramado">
                       {p.title}
                     </h3>
                     <p className="mt-3 text-[13px] leading-relaxed text-campo/60 font-medium sm:mt-4 sm:text-[15px] lg:text-[17px] lg:leading-7">
