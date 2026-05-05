@@ -15,7 +15,7 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-4">
-        <div className="grid items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
+        <div className="grid items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24 -my-[100px]">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Eyebrow / Support Line */}
             <span className="mb-4 inline-block rounded-full bg-white/5 px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40 sm:mb-6 sm:text-[10px]">
@@ -23,7 +23,7 @@ export const Hero = () => {
             </span>
 
             {/* H1 Headline */}
-            <h1 className="font-display text-[32px] leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="font-display text-[32px] leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl font-medium">
               Veja quanto ainda <br />
               <span className="text-apito">dá pra jogar</span> <br />
               no mês.
@@ -31,7 +31,7 @@ export const Hero = () => {
 
             {/* Supporting Paragraph */}
             <div className="mt-6 max-w-xl sm:mt-10">
-              <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-xl font-medium">
+              <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-xl font-normal">
                 Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" />
                 Organize seu dinheiro sem planilha complicada.
               </p>
