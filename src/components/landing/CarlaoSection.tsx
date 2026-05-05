@@ -23,7 +23,7 @@ export const CarlaoSection = () => {
             </div>
           </div>
           
-          <div className="flex-1 text-center lg:text-left order-1 lg:order-2">
+          <div className="flex-1 text-center lg:text-left order-1 lg:order-2 px-[24px] py-[24px]">
             <h2 className="font-display text-[28px] text-white sm:text-6xl leading-tight">
               Quem é o <br />
               <span className="text-apito">Professor Carlão?</span>
