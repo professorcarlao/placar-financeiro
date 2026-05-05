@@ -15,22 +15,22 @@ const pains = [
     title: "MEDO DA FATURA",
     text: "O susto aparece só no fim do mês.",
     icon: CreditCard,
-    iconColor: "text-apito",
-    iconBg: "bg-apito/12",
+    iconColor: "text-green-500",
+    iconBg: "bg-green-500/10",
   },
   {
     title: "ASSINATURA ESQUECIDA",
     text: "Cobranças pequenas passam batido.",
     icon: RefreshCcw,
-    iconColor: "text-apito",
-    iconBg: "bg-apito/12",
+    iconColor: "text-green-500",
+    iconBg: "bg-green-500/10",
   },
   {
     title: "PARCELAS ACUMULANDO",
     text: "Compras antigas seguem pesando.",
     icon: Calendar,
-    iconColor: "text-emerald-600",
-    iconBg: "bg-emerald-600/10",
+    iconColor: "text-green-500",
+    iconBg: "bg-green-500/10",
   },
 ];
 

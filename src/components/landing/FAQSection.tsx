@@ -7,24 +7,40 @@ import {
 
 const faqs = [
   {
-    q: "Preciso pagar para começar?",
-    a: "Não. Você pode criar sua conta gratuitamente para conhecer as funcionalidades do app.",
+    q: "Como organizar minhas finanças pessoais sem planilha?",
+    a: "O Finanças em Campo ajuda você a organizar o mês de forma visual, sem fórmulas ou tabelas complicadas. Você registra seus principais lances e acompanha quanto entrou, quanto saiu, quanto foi para objetivos e quanto ainda pode gastar.",
   },
   {
-    q: "Preciso colocar cartão?",
-    a: "Não pedimos cartão para o cadastro inicial. O foco é conhecer o app sem compromisso.",
+    q: "O que é o Placar do Mês no Finanças em Campo?",
+    a: "É a tela principal do app. Ela mostra com clareza quanto entrou, quanto saiu, quanto foi separado para objetivos e, principalmente, quanto você ainda pode gastar no mês — ou se precisa segurar o jogo.",
   },
   {
-    q: "O que é o Placar do Mês?",
-    a: "É a visão que mostra o saldo que ainda dá pra jogar, baseado nas suas entradas e saídas.",
+    q: "Preciso cadastrar todos os meus gastos no app?",
+    a: "Não. Você pode começar pelos principais gastos e entradas do mês, como salário, mercado, contas, cartão, assinaturas, parcelas e objetivos. Quanto mais você registra, mais claro fica o seu placar financeiro.",
   },
   {
-    q: "Preciso cadastrar tudo?",
-    a: "O ideal é registrar o que impacta seu orçamento para que o placar seja fiel à sua realidade.",
+    q: "O Finanças em Campo conecta com minha conta bancária?",
+    a: "Não. O app não acessa sua conta bancária e não é banco. Você registra as informações manualmente para ter mais clareza sobre o seu dinheiro, sem precisar conectar dados bancários.",
   },
   {
-    q: "O app indica investimentos?",
-    a: "Não. O foco é organização, controle de gastos e visibilidade do seu jogo financeiro mensal.",
+    q: "Qual é a diferença entre o Finanças em Campo e uma planilha financeira?",
+    a: "Uma planilha financeira exige fórmulas, manutenção e disciplina constante. O Finanças em Campo organiza seu dinheiro em uma lógica visual e simples: entrou, saiu, objetivos e quanto ainda dá para usar no mês.",
+  },
+  {
+    q: "O app ajuda a controlar gastos fixos, assinaturas e parcelamentos?",
+    a: "Sim. Você pode acompanhar gastos fixos, assinaturas recorrentes e parcelamentos para entender o que já está comprometido no mês e evitar que cobranças passem despercebidas.",
+  },
+  {
+    q: "Posso usar o app para acompanhar metas financeiras ou dívidas?",
+    a: "Sim. Você pode acompanhar objetivos como reserva de emergência, viagem, quitar dívida ou qualquer meta importante, vendo o progresso de forma visual dentro do app.",
+  },
+  {
+    q: "O Finanças em Campo dá dicas de investimento?",
+    a: "Não. O foco do app é organização financeira pessoal, clareza do mês, controle de gastos, objetivos e planejamento do dinheiro. Ele não faz recomendação de investimentos.",
+  },
+  {
+    q: "Preciso colocar cartão para começar?",
+    a: "Não. Você pode criar sua conta grátis e começar a usar sem cartão.",
   },
 ];
 

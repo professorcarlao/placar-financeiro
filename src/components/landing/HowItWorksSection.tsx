@@ -11,7 +11,7 @@ const steps = [
   {
     title: "2. Veja na lista",
     desc: "Tudo organizado por categorias.",
-    image: "/assets/app-screenshots/estatisticas.png",
+    image: "/assets/app-screenshots/lances-e-filtros.png",
   },
   {
     title: "3. Olhe o placar",
@@ -34,9 +34,9 @@ export const HowItWorksSection = () => {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-8">
           {steps.map((s, i) => (
             <div key={i} className="flex flex-col items-center text-center">
-              <div className="mb-5 w-[150px] aspect-[9/19.5] h-auto sm:w-full sm:max-w-[180px] lg:max-w-[200px]">
+              <div className="mx-auto mb-6 w-full max-w-[190px] sm:max-w-[200px] lg:max-w-[210px]">
                 <PhoneFrame className="shadow-xl ring-2 ring-campo/5">
-                  <img src={s.image} alt={s.title} className="h-full w-full object-cover" />
+                  <img src={s.image} alt={s.title} className="h-full w-full object-cover object-top" />
                 </PhoneFrame>
               </div>
               <p className="font-display text-xl text-campo leading-tight sm:text-2xl">{s.title}</p>

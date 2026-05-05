@@ -58,7 +58,7 @@ export const SolutionSection = () => {
           </div>
 
           <div className="relative flex justify-center lg:justify-end w-full">
-            <div className="relative w-full max-w-[240px] sm:max-w-[320px] lg:max-w-[420px]">
+            <div className="relative w-full max-w-[180px] sm:max-w-[250px] lg:max-w-[280px]">
               <div className="absolute -inset-8 -z-10 bg-apito/10 blur-[50px] rounded-full sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10">
                 <img 
@@ -72,19 +72,19 @@ export const SolutionSection = () => {
         </div>
         
         {/* Differentiation Block */}
-        <div className="mt-16 rounded-[2rem] bg-white/5 p-6 border border-white/10 sm:mt-24 sm:rounded-[2.5rem] sm:p-12">
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-12">
-            <div className="text-center lg:text-left">
+        <div className="mt-16 rounded-[2rem] bg-white/5 border border-white/10 sm:mt-24 sm:rounded-[2.5rem] overflow-hidden">
+          <div className="grid grid-cols-1 items-stretch sm:grid-cols-3">
+            <div className="flex flex-col justify-center p-8 text-center sm:p-10 lg:p-12 lg:text-left">
               <p className="font-display text-xl text-white sm:text-2xl">Não é banco.</p>
-              <p className="mt-1 text-sm text-white/40 sm:mt-2 sm:text-sm sm:text-white/50">Mostra movimentações, mas nem sempre o jogo.</p>
+              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-white/60">Mostra movimentações, mas nem sempre o jogo.</p>
             </div>
-            <div className="text-center lg:text-left">
+            <div className="flex flex-col justify-center p-8 text-center sm:p-10 lg:p-12 lg:text-left border-y border-white/10 sm:border-y-0 sm:border-x">
               <p className="font-display text-xl text-white sm:text-2xl">Não é planilha.</p>
-              <p className="mt-1 text-sm text-white/40 sm:mt-2 sm:text-sm sm:text-white/50">Exige disciplina e manutenção manual constante.</p>
+              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-white/60">Exige disciplina e manutenção manual constante.</p>
             </div>
-            <div className="rounded-xl bg-apito p-5 text-center sm:rounded-2xl sm:p-6 lg:text-left">
+            <div className="flex flex-col justify-center bg-apito p-8 text-center sm:p-10 lg:p-12 lg:text-left">
               <p className="font-display text-xl text-campo sm:text-2xl">É o Placar.</p>
-              <p className="mt-1 text-sm text-campo/60 sm:mt-2 sm:text-sm sm:text-campo/70">Quanto ainda dá pra jogar hoje.</p>
+              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-campo/80">Quanto ainda dá pra jogar hoje.</p>
             </div>
           </div>
         </div>

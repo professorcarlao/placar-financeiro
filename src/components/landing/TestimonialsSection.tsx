@@ -6,16 +6,19 @@ const testimonials = [
     name: "Marina R.",
     text: "Consegui ver meu dinheiro sem me perder em planilha.",
     role: "Usuária",
+    avatar: "https://i.pravatar.cc/150?img=32",
   },
   {
     name: "Carlos M.",
     text: "O placar me ajudou a saber quanto ainda dava pra gastar.",
     role: "Usuário",
+    avatar: "https://i.pravatar.cc/150?img=11",
   },
   {
-    name: "Juliana S.",
+    name: "Ricardo S.",
     text: "Ficou mais fácil acompanhar metas e gastos fixos.",
-    role: "Usuária",
+    role: "Usuário",
+    avatar: "https://i.pravatar.cc/150?img=12",
   },
 ];
 
@@ -34,15 +37,19 @@ export const TestimonialsSection = () => {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="group relative flex flex-col rounded-[2rem] bg-white p-8 border border-border transition-all hover:shadow-lg sm:rounded-[2.5rem] sm:p-10"
+              className="group relative flex flex-col rounded-[2rem] bg-white p-8 border border-gramado/35 transition-all hover:shadow-lg sm:rounded-[2.5rem] sm:p-10"
             >
               <Quote className="absolute top-6 right-6 h-6 w-6 text-campo/5 sm:top-8 sm:right-8 sm:h-8 sm:w-8" />
               <div className="flex-1 relative z-10">
                 <p className="text-base leading-relaxed text-campo font-medium italic sm:text-lg lg:text-xl">"{t.text}"</p>
               </div>
               <div className="mt-8 flex items-center gap-4 relative z-10">
-                <div className="h-10 w-10 rounded-xl bg-campo/10 flex items-center justify-center text-campo sm:h-12 sm:w-12">
-                    <User className="h-5 w-5 sm:h-6 sm:w-6" />
+                <div className="h-12 w-12 rounded-full overflow-hidden border border-gramado/10 bg-campo/5 sm:h-14 sm:w-14">
+                  <img 
+                    src={t.avatar} 
+                    alt={t.name}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <div>
                   <p className="font-display text-lg text-campo sm:text-xl">{t.name}</p>

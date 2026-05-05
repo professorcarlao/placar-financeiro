@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-campo pb-10 pt-24 text-white sm:pb-24 sm:pt-40 lg:pb-56 lg:pt-64"
+      className="relative overflow-hidden bg-campo pt-24 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-32 text-white"
     >
       {/* Background Decorative Elements */}
       <div className="pointer-events-none absolute inset-0 field-lines opacity-[0.03]" />
@@ -48,7 +48,7 @@ export const Hero = () => {
                   />
                 </div>
               ))}
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white/10 text-[9px] font-black text-white shadow-xl backdrop-blur-sm sm:h-11 sm:w-11 bg-gramado sm:text-xl">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white/10 text-[11px] font-black text-campo shadow-xl backdrop-blur-sm sm:h-11 sm:w-11 bg-apito sm:text-sm">
                 +500
               </div>
             </div>
@@ -79,7 +79,7 @@ export const Hero = () => {
 
           {/* Real App Screenshot Mockup */}
           <div className="relative flex justify-center lg:justify-end w-full">
-            <div className="relative w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px] shrink-0">
+            <div className="relative w-full max-w-[190px] sm:max-w-[240px] lg:max-w-[260px] shrink-0">
               <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10" hideButtons={false}>
                 <img
