@@ -33,7 +33,7 @@ export const HowItWorksSection = () => {
 
         <div className="grid gap-10 sm:grid-cols-3 sm:gap-6 lg:gap-8">
           {steps.map((s, i) => (
-            <div key={i} className="flex flex-col items-center text-center">
+            <div key={i} className="flex-col text-center flex items-center justify-center">
               <div className="mb-5 w-full max-w-[140px] sm:mb-6 sm:max-w-[180px] lg:max-w-[200px]">
                 <PhoneFrame className="shadow-xl ring-2 ring-campo/5">
                   <img src={s.image} alt={s.title} className="h-full w-full object-cover" />
