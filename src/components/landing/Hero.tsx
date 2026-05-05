@@ -48,8 +48,8 @@ export const Hero = () => {
                   />
                 </div>
               ))}
-              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white/10 bg-campo/90 text-[9px] font-black text-white shadow-xl backdrop-blur-sm sm:h-11 sm:w-11 sm:text-xs">
-                +5000
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white/10 text-[9px] font-black text-white shadow-xl backdrop-blur-sm sm:h-11 sm:w-11 bg-gramado sm:text-xl">
+                +500
               </div>
             </div>
 
