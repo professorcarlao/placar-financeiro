@@ -27,7 +27,7 @@ export const SolutionSection = () => {
       <div className="absolute inset-0 field-lines opacity-[0.03]" />
       <div className="container relative z-10 max-w-7xl px-4">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-24">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left px-[24px] py-[24px]">
             <h2 className="font-display text-[28px] text-white sm:text-6xl lg:text-7xl leading-tight">
               Cara de placar, <br />
               <span className="text-apito">não de planilha.</span>
@@ -74,11 +74,11 @@ export const SolutionSection = () => {
         {/* Differentiation Block */}
         <div className="mt-16 rounded-[2rem] bg-white/5 p-6 border border-white/10 sm:mt-24 sm:rounded-[2.5rem] sm:p-12">
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-12">
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left px-[24px] py-[24px]">
               <p className="font-display text-xl text-white sm:text-2xl">Não é banco.</p>
               <p className="mt-1 text-xs text-white/40 sm:mt-2 sm:text-sm sm:text-white/50">Mostra movimentações, mas nem sempre o jogo.</p>
             </div>
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left px-[24px] py-[24px]">
               <p className="font-display text-xl text-white sm:text-2xl">Não é planilha.</p>
               <p className="mt-1 text-xs text-white/40 sm:mt-2 sm:text-sm sm:text-white/50">Exige disciplina e manutenção manual constante.</p>
             </div>
