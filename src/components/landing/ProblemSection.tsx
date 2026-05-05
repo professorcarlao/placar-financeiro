@@ -71,7 +71,7 @@ export const ProblemSection = () => {
                     <Icon className={cn("h-6 w-6 sm:h-8 sm:w-8", p.iconBg === "bg-apito/12" && "text-gramado")} />
                   </div>
                   <div className="mt-5 sm:mt-6">
-                    <h3 className="font-display text-lg leading-none tracking-tight uppercase sm:text-2xl lg:text-[30px] text-gramado">
+                    <h3 className="font-display leading-none tracking-tight uppercase sm:text-2xl lg:text-[30px] text-gramado text-2xl">
                       {p.title}
                     </h3>
                     <p className="mt-3 text-[13px] leading-relaxed text-campo/60 font-medium sm:mt-4 sm:text-[15px] lg:text-[17px] lg:leading-7">

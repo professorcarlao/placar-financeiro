@@ -22,9 +22,9 @@ export const StickyMobileCTA = () => {
     >
       <div className="mx-auto flex w-full max-w-[400px] items-center justify-between gap-3 rounded-full border border-white/10 bg-campo/95 p-1.5 shadow-2xl backdrop-blur-md">
         <div className="pl-4 shrink min-w-0">
-          <p className="text-[9px] font-black uppercase tracking-[0.1em] text-white/40 leading-none truncate">
+          <p className="font-black uppercase tracking-[0.1em] text-white/40 leading-none truncate text-xs">
             Placar do mês
-            <span className="block mt-1 text-[11px] text-apito lowercase tracking-normal font-bold">grátis agora</span>
+            <span className="block mt-1 text-apito lowercase tracking-normal font-bold text-sm">grátis agora</span>
           </p>
         </div>
         <Button asChild variant="apito" className="h-[44px] rounded-full px-5 text-[11px] font-black uppercase shadow-lg shadow-apito/20 shrink-0">
