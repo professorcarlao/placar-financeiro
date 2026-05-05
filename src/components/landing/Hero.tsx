@@ -31,7 +31,7 @@ export const Hero = () => {
 
             {/* Supporting Paragraph */}
             <div className="mt-6 max-w-xl sm:mt-10">
-              <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-xl font-normal">
+              <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-3xl font-medium">
                 Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" />
                 Organize seu dinheiro sem planilha complicada.
               </p>
