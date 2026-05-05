@@ -8,7 +8,7 @@ export const FinalCTASection = () => {
       <div className="container relative z-10 max-w-7xl px-4">
         <div className="flex flex-col items-center text-center">
           <div className="max-w-4xl">
-            <h2 className="font-display text-[32px] text-white sm:text-7xl lg:text-8xl leading-tight">
+            <h2 className="font-display text-white sm:text-7xl lg:text-8xl leading-tight text-5xl">
               O mês já tá rolando. <br />
               <span className="text-apito uppercase">Vai jogar sem o placar?</span>
             </h2>
