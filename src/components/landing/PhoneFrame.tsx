@@ -36,7 +36,7 @@ export const PhoneFrame = ({ children, className, hideButtons, minimal, mini }: 
     >
       {/* Outer Glow/Border */}
       <div className={cn(
-        "absolute inset-0 ring-1 ring-white/20",
+        "absolute inset-0 ring-1 ring-white/20 my-0",
         minimal ? "rounded-[2rem]" : "rounded-[3rem]"
       )} />
       

@@ -28,7 +28,7 @@ export const SolutionSection = () => {
       <div className="container relative z-10 max-w-7xl px-4">
         <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr] lg:gap-24">
           <div className="text-center lg:text-left px-[24px] py-[24px]">
-            <h2 className="font-display text-[28px] text-white sm:text-6xl lg:text-7xl leading-tight">
+            <h2 className="font-display text-white sm:text-6xl lg:text-7xl leading-tight text-5xl">
               Cara de placar, <br />
               <span className="text-apito">não de planilha.</span>
             </h2>
@@ -57,7 +57,7 @@ export const SolutionSection = () => {
             </Button>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end w-full">
+          <div className="relative flex justify-center lg:justify-end w-full my-[80px] mt-0">
             <div className="relative w-full max-w-[240px] sm:max-w-[320px] lg:max-w-[420px]">
               <div className="absolute -inset-8 -z-10 bg-apito/10 blur-[50px] rounded-full sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10">

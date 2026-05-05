@@ -41,8 +41,8 @@ export const ProblemSection = () => {
         {/* Header */}
         <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
           <h2 className="font-display text-[28px] leading-tight sm:text-5xl lg:text-6xl text-center">
-            <span className="block text-campo uppercase">Começa 1x0 pra você...</span>
-            <span className="block text-cartao-vermelho uppercase">Termina em goleada contra.</span>
+            <span className="block text-campo uppercase text-4xl">Começa 1x0 pra você...</span>
+            <span className="block text-cartao-vermelho uppercase text-3xl">Termina em goleada contra.</span>
           </h2>
           <p className="mt-5 text-sm font-semibold text-campo/60 sm:mt-8 sm:text-base lg:text-xl">
             O salário entra, os gastos saem e o mês escapa sem você perceber.
@@ -71,7 +71,7 @@ export const ProblemSection = () => {
                     <Icon className={cn("h-6 w-6 sm:h-8 sm:w-8", p.iconBg === "bg-apito/12" && "text-gramado")} />
                   </div>
                   <div className="mt-5 sm:mt-6">
-                    <h3 className="font-display text-lg leading-none tracking-tight uppercase sm:text-2xl lg:text-[30px] text-gramado">
+                    <h3 className="font-display leading-none tracking-tight uppercase sm:text-2xl lg:text-[30px] text-gramado text-2xl">
                       {p.title}
                     </h3>
                     <p className="mt-3 text-[13px] leading-relaxed text-campo/60 font-medium sm:mt-4 sm:text-[15px] lg:text-[17px] lg:leading-7">
