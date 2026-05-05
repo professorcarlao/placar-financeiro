@@ -1,76 +1,102 @@
-import { AlertCircle, TrendingDown, Clock, Ghost, ShieldAlert } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Wallet, CreditCard, RefreshCcw, Calendar, ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { ProblemIllustration } from "./ProblemIllustration";
 
 const pains = [
   {
-    icon: Ghost,
-    title: "Dinheiro sumindo",
-    desc: "O saldo some da conta e você não faz ideia de qual foi o ralo da vez.",
+    title: "DINHEIRO SUMINDO",
+    text: "Você recebe e logo perde o rastro.",
+    icon: Wallet,
+    iconColor: "text-green-500",
+    iconBg: "bg-green-500/10",
   },
   {
-    icon: ShieldAlert,
-    title: "Medo da fatura",
-    desc: "Aquele frio na barriga na hora de abrir o app do banco no fim do mês.",
+    title: "MEDO DA FATURA",
+    text: "O susto aparece só no fim do mês.",
+    icon: CreditCard,
+    iconColor: "text-apito",
+    iconBg: "bg-apito/12",
   },
   {
-    icon: Clock,
-    title: "Gol contra esquecido",
-    desc: "Aquelas assinaturas que você nem usa mais, mas continuam cobrando.",
+    title: "ASSINATURA ESQUECIDA",
+    text: "Cobranças pequenas passam batido.",
+    icon: RefreshCcw,
+    iconColor: "text-apito",
+    iconBg: "bg-apito/12",
   },
   {
-    icon: TrendingDown,
-    title: "Campeonato longo",
-    desc: "As parcelas se acumulam e viram um peso cansativo no orçamento.",
-  },
-  {
-    icon: AlertCircle,
-    title: "Meta no banco",
-    desc: "O objetivo era poupar, mas a falta de visão impediu o avanço.",
+    title: "PARCELAS ACUMULANDO",
+    text: "Compras antigas seguem pesando.",
+    icon: Calendar,
+    iconColor: "text-emerald-600",
+    iconBg: "bg-emerald-600/10",
   },
 ];
 
 export const ProblemSection = () => {
   return (
-    <section className="bg-linha py-16 sm:py-24 lg:py-32">
-      <div className="container max-w-6xl">
-        <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-16">
-          <span className="inline-block rounded-full bg-campo/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-campo/40">
-            O Problema
-          </span>
-          <h2 className="mt-6 font-display text-3xl text-campo sm:text-6xl lg:text-7xl leading-tight sm:mt-8">
-            Começa 1x0 pra você... <br />
-            <span className="text-cartao-vermelho">termina em goleada contra.</span>
+    <section className="bg-linha py-16 sm:py-24 lg:py-32 overflow-hidden">
+      <div className="container max-w-6xl px-4">
+        {/* Header */}
+        <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
+          <h2 className="font-display text-[28px] leading-tight sm:text-5xl lg:text-6xl text-center">
+            <span className="block text-campo uppercase">Começa 1x0 pra você...</span>
+            <span className="block text-cartao-vermelho uppercase">Termina em goleada contra.</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground lg:text-xl font-medium sm:mt-6 sm:text-lg">
-            O salário entra, os gastos saem e no fim ninguém sabe o placar real. O cartão passa, a assinatura fica e o mês vira contra você.
+          <p className="mt-5 text-sm font-semibold text-campo/60 sm:mt-8 sm:text-base lg:text-xl">
+            O salário entra, os gastos saem e o mês escapa sem você perceber.
           </p>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-          {pains.map((p, i) => {
-            const Icon = p.icon;
-            return (
-              <div
-                key={i}
-                className="group rounded-[1.5rem] bg-white p-5 shadow-card-soft border border-border transition-all hover:shadow-xl hover:-translate-y-2 sm:rounded-[2.5rem] sm:p-10"
-              >
-                <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-2xl bg-cartao-vermelho/5 text-cartao-vermelho group-hover:scale-110 transition-transform sm:mb-8 sm:h-14 sm:w-14">
-                  <Icon className="h-5 w-5 sm:h-7 sm:w-7" />
-                </div>
-                <p className="font-display text-xl text-campo leading-tight sm:text-2xl lg:text-3xl">{p.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground font-medium sm:mt-4 sm:text-base">{p.desc}</p>
-              </div>
-            );
-          })}
-          
-          {/* Final "Support" Element */}
-          <div className="flex items-center justify-center sm:col-span-2 lg:col-span-1">
-            <div className="w-full h-full rounded-[1.5rem] bg-apito/10 p-6 border-2 border-apito/20 flex flex-col justify-center items-center text-center sm:rounded-[2.5rem] sm:p-10">
-              <p className="font-display text-lg text-campo leading-tight sm:text-2xl">
-                O Carlão veio colocar o <br />
-                <span className="underline decoration-campo/20 underline-offset-4">placar</span> na sua frente.
-              </p>
+        {/* Desktop: 2 Columns / Mobile: Stacked */}
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          {/* Column Left: Main Illustration Card */}
+          <div className="lg:pr-4">
+            <div className="overflow-hidden rounded-[2rem] bg-white p-2 shadow-2xl shadow-campo/5 border border-white sm:rounded-[2.5rem] sm:p-4">
+              <ProblemIllustration />
             </div>
           </div>
+
+          {/* Column Right: Compact Pain Cards */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
+            {pains.map((p, i) => {
+              const Icon = p.icon;
+              return (
+                <div
+                  key={i}
+                  className="group flex flex-col rounded-[22px] bg-white p-5 border border-black/5 shadow-sm transition-all hover:shadow-md sm:rounded-[28px] sm:p-8"
+                >
+                  <div className={cn("flex h-12 w-12 items-center justify-center rounded-xl border border-black/5 shadow-sm sm:h-16 sm:w-16 sm:rounded-2xl", p.iconBg, p.iconColor)}>
+                    <Icon className="h-6 w-6 sm:h-8 sm:w-8" />
+                  </div>
+                  <div className="mt-5 sm:mt-6">
+                    <h3 className="font-display text-lg leading-none tracking-tight text-campo uppercase sm:text-2xl lg:text-[30px]">
+                      {p.title}
+                    </h3>
+                    <p className="mt-3 text-[13px] leading-relaxed text-campo/60 font-medium sm:mt-4 sm:text-[15px] lg:text-[17px] lg:leading-7">
+                      {p.text}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Final CTA Button */}
+        <div className="mt-12 flex justify-center sm:mt-20">
+          <Button 
+            asChild 
+            variant="apito" 
+            size="xl" 
+            className="h-14 w-full max-w-[320px] rounded-full px-8 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:w-auto sm:px-12"
+          >
+            <a href="#cadastro">
+              Quero ver meu placar
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
-const resources = [
+import { cn } from "@/lib/utils";
+
+const features = [
   { title: "Placar do Mês", img: "/assets/app-screenshots/placar-do-mes.png" },
   { title: "Lances", img: "/assets/app-screenshots/lances-e-filtros.png" },
   { title: "Estatísticas", img: "/assets/app-screenshots/estatisticas.png" },
@@ -13,34 +15,34 @@ export const FeaturesGridSection = () => {
   return (
     <section id="recursos" className="relative overflow-hidden bg-campo py-16 sm:py-24 lg:py-32">
       <div className="absolute inset-0 field-lines opacity-[0.03]" />
-      <div className="container relative z-10 max-w-7xl">
-        <div className="mx-auto max-w-4xl text-center">
-          <span className="inline-block rounded-full bg-apito/10 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-apito">
-            Recursos
-          </span>
-          <h2 className="mt-6 font-display text-3xl text-white sm:text-6xl lg:text-7xl leading-tight sm:mt-8">
-            Tudo o que você precisa <br />
-            <span className="text-apito">para vencer o mês.</span>
+      <div className="container relative z-10 max-w-7xl px-4">
+        <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
+          <h2 className="font-display text-[28px] text-white sm:text-6xl leading-tight">
+            O que você acompanha <br />
+            <span className="text-apito">dentro do app</span>
           </h2>
+          <p className="mt-4 text-sm text-white/40 font-medium sm:mt-6 sm:text-xl sm:text-white/60">
+            As principais partes do seu mês ficam no mesmo placar.
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 sm:mt-20 sm:gap-10 lg:grid-cols-4">
-          {resources.map((r, i) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {features.map((f, i) => (
             <div
               key={i}
-              className="group flex flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 transition-all hover:bg-white/10 hover:-translate-y-2 sm:rounded-[2.5rem] sm:p-8"
+              className="group flex flex-col rounded-[22px] bg-white/[0.03] p-3 border border-white/10 transition-all hover:bg-white/[0.08] sm:rounded-[28px] sm:p-4 lg:p-5"
             >
-              <div className="aspect-[4/3] overflow-hidden mb-6 sm:mb-8">
-                <div className="h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-campo shadow-2xl sm:rounded-3xl">
-                  <img
-                    src={r.img}
-                    alt={r.title}
-                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[14px] bg-black/20 sm:rounded-[18px]">
+                <img
+                  src={f.img}
+                  alt={f.title}
+                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-              <div className="text-center">
-                <p className="font-display text-xl text-white sm:text-2xl lg:text-3xl">{r.title}</p>
+              <div className="mt-4 text-center sm:mt-6">
+                <h3 className="font-display text-lg leading-none tracking-tight text-white uppercase sm:text-[22px] lg:text-[28px]">
+                  {f.title}
+                </h3>
               </div>
             </div>
           ))}

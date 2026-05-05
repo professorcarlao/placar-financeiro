@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { PlayCircle, Star } from "lucide-react";
+import { PlayCircle } from "lucide-react";
 import { PhoneFrame } from "./PhoneFrame";
 
 export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-campo pb-24 pt-40 text-white lg:pb-56 lg:pt-64"
+      className="relative overflow-hidden bg-campo pb-16 pt-32 text-white sm:pb-24 sm:pt-40 lg:pb-56 lg:pt-64"
     >
       {/* Background Decorative Elements */}
       <div className="pointer-events-none absolute inset-0 field-lines opacity-[0.03]" />
@@ -14,50 +14,74 @@ export const Hero = () => {
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-apito/10 blur-[100px] sm:h-[800px] sm:w-[1200px] sm:blur-[140px]" />
       </div>
 
-      <div className="container relative z-10 max-w-7xl">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_1fr] lg:gap-24">
+      <div className="container relative z-10 mx-auto max-w-7xl px-4">
+        <div className="grid items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            <h1 className="font-display text-3xl leading-[1.1] tracking-tight text-white xs:text-4xl sm:text-7xl lg:text-8xl">
-              Veja o placar do seu mês <br />
-              <span className="text-apito">em segundos.</span>
+            {/* Eyebrow / Support Line */}
+            <span className="mb-4 inline-block rounded-full bg-white/5 px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40 sm:mb-6 sm:text-[10px]">
+              Simples • Visual • Direto
+            </span>
+
+            {/* H1 Headline */}
+            <h1 className="font-display text-[32px] leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Veja quanto ainda <br />
+              <span className="text-apito">dá pra jogar</span> <br />
+              no mês.
             </h1>
 
-            <div className="mt-8 max-w-2xl sm:mt-10">
-              <p className="text-lg leading-relaxed text-white/90 lg:text-2xl font-medium sm:text-xl">
-                Pare de terminar o mês sem saber para onde seu dinheiro foi.
-              </p>
-              <p className="mt-3 text-base leading-relaxed text-white/70 lg:text-xl sm:mt-4 sm:text-lg">
-                Com o Finanças em Campo, você entende quanto entrou, quanto saiu, quanto foi para seus objetivos e quanto ainda dá pra jogar — sem planilha complicada.
+            {/* Supporting Paragraph */}
+            <div className="mt-6 max-w-xl sm:mt-10">
+              <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-xl font-medium">
+                Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" /> 
+                Organize seu dinheiro sem planilha complicada.
               </p>
             </div>
 
-            <div className="mt-8 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:gap-5 lg:justify-start w-full sm:w-auto">
-              <Button asChild variant="apito" size="xl" className="h-14 w-full sm:w-auto rounded-full px-8 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-[72px] sm:px-12 sm:text-xl">
+            {/* Social Proof - Avatars Row */}
+            <div className="mt-8 flex -space-x-3 overflow-hidden sm:mt-10 sm:-space-x-4">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="relative inline-block h-8 w-8 rounded-full border-2 border-campo bg-campo shadow-xl sm:h-11 sm:w-11">
+                  <img 
+                    src={`https://i.pravatar.cc/100?img=${i + 20}`} 
+                    alt="Usuário" 
+                    className="h-full w-full rounded-full object-cover"
+                  />
+                </div>
+              ))}
+              <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white/10 bg-campo/90 text-[9px] font-black text-white shadow-xl backdrop-blur-sm sm:h-11 sm:w-11 sm:text-xs">
+                +5000
+              </div>
+            </div>
+
+            {/* CTA Row */}
+            <div className="mt-10 flex flex-col items-center gap-3.5 sm:mt-12 sm:flex-row sm:gap-5 lg:justify-start w-full max-w-[320px] sm:max-w-none">
+              <Button asChild variant="apito" size="xl" className="h-14 w-full sm:w-auto rounded-full px-8 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:px-12 sm:text-lg">
                 <a href="#cadastro">
-                  Criar minha conta grátis
+                  Ver meu placar grátis
                 </a>
               </Button>
-              <Button asChild variant="campo-outline" size="xl" className="h-14 w-full sm:w-auto rounded-full px-8 text-sm transition-all hover:scale-105 sm:h-[72px] sm:px-10 sm:text-lg">
+              <Button asChild variant="campo-outline" size="xl" className="h-14 w-full sm:w-auto rounded-full px-8 text-xs transition-all hover:scale-105 sm:h-16 sm:px-10 sm:text-base opacity-70 hover:opacity-100">
                 <a href="#como-funciona">
-                  <PlayCircle className="mr-3 h-5 w-5 text-apito sm:h-6 sm:w-6" />
+                  <PlayCircle className="mr-3 h-5 w-5 text-apito" />
                   Ver como funciona
                 </a>
               </Button>
             </div>
 
-            <div className="mt-10 flex items-center gap-3">
-              <Star className="h-4 w-4 text-apito fill-apito" />
-              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
+            {/* Microcopy */}
+            <div className="mt-6 flex items-center gap-2 lg:ml-2">
+              <div className="h-1 w-1 rounded-full bg-apito animate-pulse sm:h-1.5 sm:w-1.5" />
+              <p className="text-[9px] font-black uppercase tracking-[0.2em] text-white/60 sm:text-[10px]">
                 Sem cartão para começar.
               </p>
             </div>
           </div>
 
           {/* Real App Screenshot Mockup */}
-          <div className="relative flex justify-center lg:justify-end w-full overflow-hidden sm:overflow-visible">
-            <div className="relative w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[380px]">
-              <div className="absolute -inset-10 -z-10 bg-apito/20 blur-[60px] rounded-full sm:blur-[100px]" />
-              <PhoneFrame className="shadow-2xl ring-4 ring-white/10">
+          <div className="relative flex justify-center lg:justify-end w-full">
+            <div className="relative w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px] shrink-0">
+              <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:blur-[100px]" />
+              <PhoneFrame className="shadow-2xl ring-4 ring-white/10" hideButtons={false}>
                 <img 
                   src="/assets/app-screenshots/placar-do-mes.png" 
                   alt="Placar do Mês" 

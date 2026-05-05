@@ -61,10 +61,15 @@
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Manrope', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   .font-display {
