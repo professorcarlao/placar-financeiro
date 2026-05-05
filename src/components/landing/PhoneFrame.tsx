@@ -6,9 +6,26 @@ interface PhoneFrameProps {
   className?: string;
   hideButtons?: boolean;
   minimal?: boolean;
+  mini?: boolean;
 }
 
-export const PhoneFrame = ({ children, className, hideButtons, minimal }: PhoneFrameProps) => {
+export const PhoneFrame = ({ children, className, hideButtons, minimal, mini }: PhoneFrameProps) => {
+  if (mini) {
+    return (
+      <div
+        className={cn(
+          "relative mx-auto aspect-[9/19.5] w-full bg-[#0a0a0a] p-[2px] rounded-[1.4rem] ring-1 ring-white/10 shadow-lg",
+          className,
+        )}
+      >
+        <div className="relative h-full w-full overflow-hidden rounded-[1.2rem] bg-black">
+          <div className="absolute left-1/2 top-1 z-50 h-2 w-8 -translate-x-1/2 rounded-full bg-black" />
+          <div className="h-full w-full">{children}</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={cn(

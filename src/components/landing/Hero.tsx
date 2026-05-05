@@ -32,7 +32,7 @@ export const Hero = () => {
             {/* Supporting Paragraph */}
             <div className="mt-6 max-w-xl sm:mt-10">
               <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-xl font-medium">
-                Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" /> 
+                Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" />
                 Organize seu dinheiro sem planilha complicada.
               </p>
             </div>
@@ -41,9 +41,9 @@ export const Hero = () => {
             <div className="mt-8 flex -space-x-3 overflow-hidden sm:mt-10 sm:-space-x-4">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="relative inline-block h-8 w-8 rounded-full border-2 border-campo bg-campo shadow-xl sm:h-11 sm:w-11">
-                  <img 
-                    src={`https://i.pravatar.cc/100?img=${i + 20}`} 
-                    alt="Usuário" 
+                  <img
+                    src={`https://i.pravatar.cc/100?img=${i + 20}`}
+                    alt="Usuário"
                     className="h-full w-full rounded-full object-cover"
                   />
                 </div>
@@ -82,9 +82,9 @@ export const Hero = () => {
             <div className="relative w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px] shrink-0">
               <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10" hideButtons={false}>
-                <img 
-                  src="/assets/app-screenshots/placar-do-mes.png" 
-                  alt="Placar do Mês" 
+                <img
+                  src="/assets/app-screenshots/placar-do-mes.png"
+                  alt="Placar do Mês"
                   className="w-full h-full object-cover"
                 />
               </PhoneFrame>
