@@ -24,7 +24,7 @@ export const TestimonialsSection = () => {
     <section className="bg-background py-16 sm:py-24 lg:py-32">
       <div className="container max-w-7xl px-4">
         <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
-          <h2 className="font-display text-[28px] text-campo sm:text-6xl lg:text-7xl leading-tight">
+          <h2 className="font-display text-campo sm:text-6xl lg:text-7xl leading-tight text-4xl">
             Quem entra em campo <br />
             <span className="text-gramado">começa a ver o jogo.</span>
           </h2>

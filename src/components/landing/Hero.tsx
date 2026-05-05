@@ -14,16 +14,16 @@ export const Hero = () => {
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-apito/10 blur-[100px] sm:h-[800px] sm:w-[1200px] sm:blur-[140px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl px-4">
+      <div className="container relative z-10 mx-auto max-w-7xl py-0 my-[50px] px-0">
         <div className="grid items-center gap-10 sm:gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24 -my-[100px]">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left my-[60px]">
             {/* Eyebrow / Support Line */}
             <span className="mb-4 inline-block rounded-full bg-white/5 px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40 sm:mb-6 sm:text-[10px]">
               Simples • Visual • Direto
             </span>
 
             {/* H1 Headline */}
-            <h1 className="font-display text-[32px] leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl font-medium">
+            <h1 className="font-display leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl font-medium pb-0 py-0 my-0 text-5xl">
               Veja quanto ainda <br />
               <span className="text-apito">dá pra jogar</span> <br />
               no mês.
@@ -31,7 +31,7 @@ export const Hero = () => {
 
             {/* Supporting Paragraph */}
             <div className="mt-6 max-w-xl sm:mt-10">
-              <p className="text-sm leading-relaxed text-white/80 sm:text-lg lg:text-3xl font-medium">
+                <p className="leading-relaxed text-white/80 sm:text-lg lg:text-3xl font-medium text-base">
                 Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" />
                 Organize seu dinheiro sem planilha complicada.
               </p>
@@ -78,7 +78,7 @@ export const Hero = () => {
           </div>
 
           {/* Real App Screenshot Mockup */}
-          <div className="relative flex justify-center lg:justify-end w-full">
+          <div className="relative flex justify-center lg:justify-end w-full my-[80px] mt-0">
             <div className="relative w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px] shrink-0">
               <div className="absolute -inset-10 -z-10 bg-apito/10 blur-[60px] rounded-full sm:blur-[100px]" />
               <PhoneFrame className="shadow-2xl ring-4 ring-white/10" hideButtons={false}>

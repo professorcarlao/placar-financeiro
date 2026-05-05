@@ -25,7 +25,7 @@ export const HowItWorksSection = () => {
     <section id="como-funciona" className="bg-linha py-16 sm:py-24">
       <div className="container max-w-6xl px-4">
         <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
-          <h2 className="font-display text-[28px] text-campo sm:text-5xl lg:text-6xl leading-tight">
+          <h2 className="font-display text-campo sm:text-5xl lg:text-6xl leading-tight text-4xl">
             Do registro ao placar, <br />
             <span className="text-gramado">sem complicação.</span>
           </h2>

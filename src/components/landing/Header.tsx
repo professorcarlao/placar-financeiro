@@ -28,7 +28,7 @@ export const Header = () => {
           : "h-16 bg-transparent sm:h-20"
       )}
     >
-      <div className="mx-auto h-full max-w-6xl px-4 flex items-center justify-between gap-2 sm:px-6 lg:px-8">
+      <div className="mx-auto h-full max-w-6xl px-4 flex items-center justify-between sm:px-6 lg:px-8 gap-[5px]">
         {/* Logo / Marca */}
         <a href="#top" className="flex items-center gap-1.5 min-w-0 group shrink">
           <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full border border-apito/30 bg-white sm:h-10 sm:w-10">

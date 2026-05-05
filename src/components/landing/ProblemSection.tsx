@@ -41,8 +41,8 @@ export const ProblemSection = () => {
         {/* Header */}
         <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
           <h2 className="font-display text-[28px] leading-tight sm:text-5xl lg:text-6xl text-center">
-            <span className="block text-campo uppercase">Começa 1x0 pra você...</span>
-            <span className="block text-cartao-vermelho uppercase">Termina em goleada contra.</span>
+            <span className="block text-campo uppercase text-4xl">Começa 1x0 pra você...</span>
+            <span className="block text-cartao-vermelho uppercase text-3xl">Termina em goleada contra.</span>
           </h2>
           <p className="mt-5 text-sm font-semibold text-campo/60 sm:mt-8 sm:text-base lg:text-xl">
             O salário entra, os gastos saem e o mês escapa sem você perceber.
