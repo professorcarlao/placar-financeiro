@@ -32,8 +32,7 @@ export const Hero = () => {
             {/* Supporting Paragraph */}
             <div className="mt-6 max-w-xl sm:mt-10">
               <p className="text-base leading-7 text-white/80 sm:text-lg lg:text-xl font-medium">
-                Entradas, saídas, objetivos e gastos futuros em um placar simples. <br className="hidden sm:block" />
-                Organize seu dinheiro sem planilha complicada.
+                Um app de controle financeiro pessoal simples e visual para organizar entradas, gastos, metas, assinaturas e parcelamentos — e entender quanto você ainda pode gastar no mês.
               </p>
             </div>
 
@@ -56,7 +55,7 @@ export const Hero = () => {
             {/* CTA Row */}
             <div className="mt-10 flex flex-col items-center gap-3 w-full max-w-[320px] mx-auto sm:flex-row sm:max-w-none">
               <Button asChild variant="apito" className="h-12 w-full rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:px-12 sm:text-lg sm:w-auto">
-                <a href="#cadastro">
+                <a href="https://app.financasemcampo.com.br/signup">
                   Ver meu placar grátis
                 </a>
               </Button>

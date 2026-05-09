@@ -15,8 +15,8 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=11",
   },
   {
-    name: "Ricardo S.",
-    text: "Ficou mais fácil acompanhar metas e gastos fixos.",
+    name: "Felipe A.",
+    text: "Ficou mais fácil acompanhar metas, gastos fixos e parcelamentos.",
     role: "Usuário",
     avatar: "https://i.pravatar.cc/150?img=12",
   },

@@ -10,14 +10,14 @@ export const FinalCTASection = () => {
           <div className="max-w-[320px] mx-auto sm:max-w-4xl">
             <h2 className="font-display text-4xl leading-none text-white sm:text-7xl lg:text-8xl sm:leading-tight">
               O mês já tá rolando. <br />
-              <span className="text-apito uppercase">Vai jogar sem o placar?</span>
+              <span className="text-apito uppercase">Vai jogar sem olhar o placar?</span>
             </h2>
             <p className="mt-5 text-base leading-7 text-white/80 sm:mt-8 sm:text-lg lg:text-xl font-medium">
-              Crie sua conta grátis e veja seu jogo em poucos minutos.
+              Crie sua conta grátis, registre seus primeiros lances e veja quanto ainda pode gastar no mês.
             </p>
             <div className="mt-10 flex justify-center">
               <Button asChild variant="apito" className="h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:w-auto sm:px-12 sm:text-lg">
-                <a href="#cadastro">
+                <a href="https://app.financasemcampo.com.br/signup">
                   Criar minha conta grátis
                 </a>
               </Button>

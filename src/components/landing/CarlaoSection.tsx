@@ -30,7 +30,7 @@ export const CarlaoSection = () => {
             </h2>
             
             <p className="mt-5 text-sm leading-relaxed text-white/70 font-medium sm:mt-6 sm:text-lg">
-              O técnico que traduz seu dinheiro em linguagem de jogo. Sem economês, sem palestra chata: só o placar do mês, os lances e o que precisa de atenção.
+              O técnico que traduz organização financeira em linguagem simples, visual e sem economês. Ele te ajuda a olhar para o Placar do Mês, entender seus lances e perceber o que precisa de atenção.
             </p>
             
             <div className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">

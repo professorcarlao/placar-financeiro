@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 
 const features = [
-  { title: "Placar do Mês", img: "/assets/app-screenshots/placar-do-mes.png" },
-  { title: "Lances", img: "/assets/app-screenshots/lances-e-filtros.png" },
-  { title: "Estatísticas", img: "/assets/app-screenshots/estatisticas.png" },
-  { title: "Objetivos", img: "/assets/app-screenshots/Objetivos.png" },
-  { title: "Gastos Fixos", img: "/assets/app-screenshots/gastos-fixos.png" },
-  { title: "Assinaturas", img: "/assets/app-screenshots/assinatura.png" },
-  { title: "Parcelamentos", img: "/assets/app-screenshots/parcelas.png" },
-  { title: "Vestiário", img: "/assets/app-screenshots/vestiario.png" },
+  { title: "Placar do Mês", desc: "Veja quanto entrou, saiu e ainda pode gastar.", img: "/assets/app-screenshots/placar-do-mes.png" },
+  { title: "Lances", desc: "Registre entradas e gastos de forma simples.", img: "/assets/app-screenshots/lances-e-filtros.png" },
+  { title: "Estatísticas", desc: "Entenda padrões do seu mês financeiro.", img: "/assets/app-screenshots/estatisticas.png" },
+  { title: "Objetivos", desc: "Acompanhe metas financeiras com progresso visível.", img: "/assets/app-screenshots/Objetivos.png" },
+  { title: "Gastos Fixos", desc: "Organize contas recorrentes como aluguel, luz e internet.", img: "/assets/app-screenshots/gastos-fixos.png" },
+  { title: "Assinaturas", desc: "Controle cobranças mensais que podem passar despercebidas.", img: "/assets/app-screenshots/assinatura.png" },
+  { title: "Parcelamentos", desc: "Veja compras parceladas e o que ainda está comprometido.", img: "/assets/app-screenshots/parcelas.png" },
+  { title: "Vestiário", desc: "Ajuste perfil, preferências e configurações do app.", img: "/assets/app-screenshots/vestiario.png" },
 ];
 
 export const FeaturesGridSection = () => {
@@ -22,7 +22,7 @@ export const FeaturesGridSection = () => {
             <span className="text-apito">dentro do app</span>
           </h2>
           <p className="mt-4 text-sm text-white/40 font-medium sm:mt-6 sm:text-xl sm:text-white/60">
-            As principais partes do seu mês ficam no mesmo placar.
+            Controle gastos, objetivos, assinaturas, parcelamentos e estatísticas em uma visão simples do mês.
           </p>
         </div>
 
@@ -43,6 +43,9 @@ export const FeaturesGridSection = () => {
                 <h3 className="font-display text-lg leading-none tracking-tight text-white uppercase sm:text-[22px] lg:text-[28px]">
                   {f.title}
                 </h3>
+                <p className="mt-2 text-xs leading-relaxed text-white/40 font-medium sm:text-sm">
+                  {f.desc}
+                </p>
               </div>
             </div>
           ))}

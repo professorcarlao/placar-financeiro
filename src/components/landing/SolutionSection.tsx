@@ -5,19 +5,19 @@ import { PhoneFrame } from "./PhoneFrame";
 const features = [
   {
     title: "Quanto dá pra jogar",
-    desc: "Saldo real para usar sem susto.",
+    desc: "Veja quanto ainda pode gastar sem susto.",
   },
   {
     title: "Entrou no jogo",
-    desc: "Tudo que entrou no seu mês.",
+    desc: "Acompanhe suas entradas do mês.",
   },
   {
     title: "Saiu do jogo",
-    desc: "Contas e gastos sob controle.",
+    desc: "Organize seus gastos mensais.",
   },
   {
     title: "Objetivos",
-    desc: "Progresso visual das suas metas.",
+    desc: "Veja suas metas financeiras com progresso claro.",
   },
 ];
 
@@ -33,7 +33,7 @@ export const SolutionSection = () => {
               <span className="text-apito">não de planilha.</span>
             </h2>
             <p className="mt-4 text-base leading-7 text-white/70 sm:text-lg lg:text-xl font-medium sm:px-0">
-              O app mostra o que realmente importa para o seu bolso hoje. Uma visão direta e visual do seu jogo financeiro.
+              Uma alternativa visual à planilha financeira: veja o que entrou, o que saiu, seus objetivos e o dinheiro disponível para o mês.
             </p>
 
             <div className="mt-10 grid gap-3 sm:grid-cols-2 sm:gap-4">
@@ -51,7 +51,7 @@ export const SolutionSection = () => {
             </div>
 
             <Button asChild variant="apito" className="mt-10 h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-14 sm:w-auto sm:px-10 sm:text-lg">
-              <a href="#cadastro">
+              <a href="https://app.financasemcampo.com.br/signup">
                 Ver meu placar grátis
               </a>
             </Button>
@@ -76,15 +76,15 @@ export const SolutionSection = () => {
           <div className="grid grid-cols-1 items-stretch sm:grid-cols-3">
             <div className="flex flex-col justify-center p-8 text-center sm:p-10 lg:p-12 lg:text-left">
               <p className="font-display text-xl text-white sm:text-2xl">Não é banco.</p>
-              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-white/60">Mostra movimentações, mas nem sempre o jogo.</p>
+              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-white/60">Mostra movimentações, mas nem sempre explica o jogo.</p>
             </div>
             <div className="flex flex-col justify-center p-8 text-center sm:p-10 lg:p-12 lg:text-left border-y border-white/10 sm:border-y-0 sm:border-x">
               <p className="font-display text-xl text-white sm:text-2xl">Não é planilha.</p>
-              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-white/60">Exige disciplina e manutenção manual constante.</p>
+              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-white/60">Evita fórmulas, abas e manutenção manual.</p>
             </div>
             <div className="flex flex-col justify-center bg-apito p-8 text-center sm:p-10 lg:p-12 lg:text-left">
-              <p className="font-display text-xl text-campo sm:text-2xl">É o Placar.</p>
-              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-campo/80">Quanto ainda dá pra jogar hoje.</p>
+              <p className="font-display text-xl text-campo sm:text-2xl">É o placar.</p>
+              <p className="mt-2 text-[1.1rem] font-medium leading-[1.5] text-campo/80">Mostra com clareza quanto você ainda pode gastar no mês.</p>
             </div>
           </div>
         </div>

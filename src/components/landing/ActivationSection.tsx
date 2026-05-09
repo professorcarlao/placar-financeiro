@@ -17,7 +17,7 @@ export const ActivationSection = () => {
             <span className="text-apito uppercase">seu placar por dentro.</span>
           </h2>
           <p className="mx-auto mt-5 max-w-[320px] text-base leading-7 text-white/75 sm:mt-6 sm:text-lg lg:text-xl font-medium sm:max-w-2xl">
-            Registre seus primeiros lances e entenda como o Placar combina com sua rotina.
+            Entre no app, registre seus primeiros lances e veja como o Finanças em Campo ajuda no controle financeiro do mês.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4 sm:mt-10 sm:gap-10">
@@ -36,7 +36,7 @@ export const ActivationSection = () => {
 
           <div className="mt-10 flex flex-col items-center gap-5 sm:mt-16 sm:gap-6">
             <Button asChild variant="apito" className="h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-20 sm:px-20 sm:text-xl sm:w-auto">
-              <a href="#">
+              <a href="https://app.financasemcampo.com.br/signup">
                 Criar minha conta grátis
               </a>
             </Button>
