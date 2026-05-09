@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import carlao from "@/assets/professor-carlao.png";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
@@ -12,6 +13,8 @@ const links = [
 
 export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -23,14 +26,14 @@ export const Header = () => {
     <header 
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300 h-16",
-        scrolled 
+        scrolled || !isHomePage
           ? "bg-campo/95 backdrop-blur-md shadow-md border-b border-white/5" 
           : "bg-transparent"
       )}
     >
       <div className="mx-auto h-full max-w-6xl px-4 flex items-center justify-between gap-2 sm:px-6 lg:px-8">
         {/* Logo / Marca */}
-        <a href="#top" className="flex items-center gap-1.5 min-w-0 group shrink">
+        <Link to="/" className="flex items-center gap-1.5 min-w-0 group shrink">
           <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full border border-apito/30 bg-white sm:h-10 sm:w-10">
             <img 
               src={carlao} 
@@ -41,11 +44,11 @@ export const Header = () => {
           <span className="font-display text-sm tracking-tight text-white whitespace-nowrap pt-0.5 truncate sm:text-lg lg:text-xl">
             Finanças em Campo
           </span>
-        </a>
+        </Link>
 
         {/* Links do Menu - Desktop */}
         <nav className="hidden items-center gap-6 md:flex lg:gap-8">
-          {links.map((l) => (
+          {isHomePage && links.map((l) => (
             <a
               key={l.href}
               href={l.href}

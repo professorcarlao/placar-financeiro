@@ -1,5 +1,5 @@
 import carlao from "@/assets/professor-carlao.png";
-import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -28,8 +28,8 @@ export const Footer = () => {
 
           <div className="flex flex-col items-center gap-8 md:items-end">
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-[0.2em]">
-              <a href="#" className="transition-colors hover:text-apito">Política de privacidade</a>
-              <a href="#" className="transition-colors hover:text-apito">Termos de uso</a>
+              <Link to="/politica-de-privacidade" className="transition-colors hover:text-apito">Política de privacidade</Link>
+              <Link to="/termos-de-uso" className="transition-colors hover:text-apito">Termos de uso</Link>
             </div>
             <div className="flex flex-col items-center gap-2 md:items-end">
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/20">

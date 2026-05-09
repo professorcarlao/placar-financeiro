@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export const StickyMobileCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +15,8 @@ export const StickyMobileCTA = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (!isHomePage) return null;
 
   return (
     <div 
