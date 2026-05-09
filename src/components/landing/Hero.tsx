@@ -32,7 +32,7 @@ export const Hero = () => {
             {/* Supporting Paragraph */}
             <div className="mt-6 max-w-xl sm:mt-10">
               <p className="text-base leading-7 text-white/80 sm:text-lg lg:text-xl font-medium">
-                Um app de controle financeiro pessoal simples e visual para organizar entradas, gastos, metas, assinaturas e parcelamentos — e entender quanto você ainda pode gastar no mês.
+                Um app de controle financeiro pessoal simples e visual para organizar entradas, gastos, metas, assinaturas e parcelamentos e entender quanto você ainda pode gastar no mês.
               </p>
             </div>
 

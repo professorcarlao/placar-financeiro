@@ -7,7 +7,6 @@ import { Link, useLocation } from "react-router-dom";
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#recursos", label: "Recursos" },
-  { href: "#para-quem", label: "Para quem é" },
   { href: "#faq", label: "Dúvidas" },
 ];
 
