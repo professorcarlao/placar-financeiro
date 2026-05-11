@@ -10,11 +10,10 @@ import { ActivationSection } from "@/components/landing/ActivationSection";
 import { FAQSection } from "@/components/landing/FAQSection";
 import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { Footer } from "@/components/landing/Footer";
-import { StickyMobileCTA } from "@/components/landing/StickyMobileCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen max-w-full overflow-x-hidden bg-background selection:bg-[#F7E135] selection:text-black pb-32 lg:pb-0">
+    <div className="min-h-screen max-w-full overflow-x-hidden bg-background selection:bg-[#F7E135] selection:text-black">
       <Header />
       <main>
         <Hero />
@@ -29,7 +28,6 @@ const Index = () => {
         <FinalCTASection />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </div>
   );
 };
