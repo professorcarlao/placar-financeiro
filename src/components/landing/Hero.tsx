@@ -19,20 +19,19 @@ export const Hero = () => {
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left max-w-[320px] mx-auto sm:max-w-none">
             {/* Eyebrow / Support Line */}
             <span className="mb-4 inline-block rounded-full bg-white/5 px-4 py-1.5 text-[9px] font-black uppercase tracking-[0.2em] text-white/40 sm:mb-6 sm:text-[10px]">
-              Simples • Visual • Direto
+              Controle financeiro simples
             </span>
 
             {/* H1 Headline */}
             <h1 className="font-display text-[52px] leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Veja quanto ainda <br />
-              <span className="text-apito">dá pra jogar</span> <br />
-              no mês.
+              <span className="text-apito">pode gastar no mês.</span>
             </h1>
 
             {/* Supporting Paragraph */}
-            <div className="mt-6 max-w-xl sm:mt-10">
-              <p className="text-base leading-7 text-white/80 sm:text-lg lg:text-xl font-medium">
-                Um app de controle financeiro pessoal simples e visual para organizar entradas, gastos, metas, assinaturas e parcelamentos e entender quanto você ainda pode gastar no mês.
+            <div className="mt-6 max-w-[620px] sm:mt-10">
+              <p className="text-base leading-7 text-white/80 sm:text-lg lg:text-xl font-medium break-normal hyphens-none">
+                O Finanças em Campo é um app de controle financeiro pessoal simples e visual. Crie sua conta grátis em poucos minutos, registre seus primeiros gastos e organize seu mês sem planilha.
               </p>
             </div>
 
@@ -54,11 +53,6 @@ export const Hero = () => {
 
             {/* CTA Row */}
             <div className="mt-10 flex flex-col items-center gap-3 w-full max-w-[320px] mx-auto sm:flex-row sm:max-w-none">
-              <Button asChild variant="apito" className="h-12 w-full rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:px-12 sm:text-lg sm:w-auto">
-                <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=hero_criar_conta">
-                  Ver meu placar grátis
-                </a>
-              </Button>
               <Button asChild variant="campo-outline" className="h-12 w-full rounded-full px-5 text-base font-black transition-all hover:scale-105 sm:h-16 sm:px-10 sm:text-base sm:w-auto opacity-70 hover:opacity-100">
                 <a href="#como-funciona">
                   <PlayCircle className="mr-3 h-5 w-5 text-apito" />
