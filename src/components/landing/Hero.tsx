@@ -55,7 +55,7 @@ export const Hero = () => {
             {/* CTA Row */}
             <div className="mt-10 flex flex-col items-center gap-3 w-full max-w-[320px] mx-auto sm:flex-row sm:max-w-none">
               <Button asChild variant="apito" className="h-12 w-full rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:px-12 sm:text-lg sm:w-auto">
-                <a href="https://app.financasemcampo.com.br/signup">
+                <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=hero_criar_conta">
                   Ver meu placar grátis
                 </a>
               </Button>

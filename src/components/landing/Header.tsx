@@ -65,7 +65,7 @@ export const Header = () => {
             variant="apito" 
             className="rounded-full font-bold shadow-apito transition-transform hover:scale-105 active:scale-95 h-10 px-4 text-sm shrink-0"
           >
-            <a href="https://app.financasemcampo.com.br/signup">
+            <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=header_criar_conta">
               <span className="sm:hidden">Criar conta</span>
               <span className="hidden sm:inline">Criar conta grátis</span>
             </a>

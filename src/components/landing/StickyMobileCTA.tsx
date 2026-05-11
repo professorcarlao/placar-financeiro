@@ -33,7 +33,7 @@ export const StickyMobileCTA = () => {
           </p>
         </div>
         <Button asChild variant="apito" className="h-[44px] rounded-full px-5 text-[11px] font-black uppercase shadow-lg shadow-apito/20 shrink-0">
-          <a href="https://app.financasemcampo.com.br/signup" className="whitespace-nowrap">
+          <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=sticky_mobile_criar_conta" className="whitespace-nowrap">
             Ver meu placar grátis
           </a>
         </Button>
