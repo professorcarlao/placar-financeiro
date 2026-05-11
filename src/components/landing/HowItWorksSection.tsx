@@ -49,12 +49,6 @@ export const HowItWorksSection = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-12 text-center sm:mt-16">
-          <Button asChild variant="apito" size="lg" className="h-12 w-full max-w-[320px] mx-auto rounded-full px-8 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:w-auto">
-            <a href="https://app.financasemcampo.com.br/signup">Começar pelo Placar do Mês</a>
-          </Button>
-        </div>
       </div>
     </section>
   );

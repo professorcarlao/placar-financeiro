@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#recursos", label: "Recursos" },
-  { href: "#faq", label: "Dúvidas" },
+  { href: "#duvidas", label: "Dúvidas" },
 ];
 
 export const Header = () => {

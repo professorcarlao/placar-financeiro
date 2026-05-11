@@ -50,31 +50,29 @@ export const ProblemSection = () => {
         </div>
 
         {/* Desktop: 2 Columns / Mobile: Stacked */}
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          {/* Column Left: Main Illustration Card */}
-          <div className="lg:pr-4">
-            <div className="overflow-hidden rounded-[2rem] bg-white p-2 shadow-2xl shadow-campo/5 border border-white sm:rounded-[2.5rem] sm:p-4">
-              <ProblemIllustration />
-            </div>
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+          {/* Column Left: Main Illustration Visual */}
+          <div className="w-full mx-auto lg:mx-0">
+            <ProblemIllustration />
           </div>
 
           {/* Column Right: Compact Pain Cards */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
+          <div className="grid grid-cols-1 gap-5">
             {pains.map((p, i) => {
               const Icon = p.icon;
               return (
                 <div
                   key={i}
-                  className="group flex flex-col rounded-[22px] bg-white p-5 border border-black/5 shadow-sm transition-all hover:shadow-md sm:rounded-[28px] sm:p-8"
+                  className="group flex items-center gap-5 rounded-[24px] bg-white p-6 border border-gramado/10 shadow-sm transition-all hover:shadow-md sm:rounded-[32px] sm:p-7"
                 >
-                  <div className={cn("flex h-12 w-12 items-center justify-center rounded-xl border border-black/5 shadow-sm sm:h-16 sm:w-16 sm:rounded-2xl", p.iconBg, p.iconColor)}>
-                    <Icon className="h-6 w-6 sm:h-8 sm:w-8" />
+                  <div className={cn("flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gramado/10 shadow-sm sm:h-14 sm:w-14 sm:rounded-2xl", p.iconBg, "text-green-600")}>
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
                   </div>
-                  <div className="mt-5 sm:mt-6">
-                    <h3 className="font-display text-xl leading-tight tracking-tight text-campo uppercase sm:text-2xl lg:text-[30px]">
+                  <div>
+                    <h3 className="font-display text-lg leading-tight tracking-tight text-campo uppercase sm:text-xl lg:text-[24px]">
                       {p.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-campo/60 font-medium sm:mt-4 sm:text-[15px] lg:text-[17px] lg:leading-7">
+                    <p className="mt-1 text-sm leading-6 text-campo/60 font-medium lg:leading-7">
                       {p.text}
                     </p>
                   </div>
