@@ -89,7 +89,17 @@ export const ProblemSection = () => {
             variant="apito" 
             className="h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:w-auto sm:px-12"
           >
-            <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=section_criar_conta">
+            <a 
+              href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=section_criar_conta"
+              onClick={() => {
+                if (window.gtag) {
+                  window.gtag('event', 'lp_cta_click', {
+                    'cta_location': 'problem_section_cta',
+                    'destination': 'app_signup'
+                  });
+                }
+              }}
+            >
               Quero ver meu placar
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>

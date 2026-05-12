@@ -17,7 +17,17 @@ export const FinalCTASection = () => {
             </p>
             <div className="mt-10 flex justify-center">
               <Button asChild variant="apito" className="h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:w-auto sm:px-12 sm:text-lg">
-                <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=final_criar_conta">
+                <a 
+                  href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=final_criar_conta"
+                  onClick={() => {
+                    if (window.gtag) {
+                      window.gtag('event', 'lp_cta_click', {
+                        'cta_location': 'final_cta',
+                        'destination': 'app_signup'
+                      });
+                    }
+                  }}
+                >
                   Criar minha conta grátis
                 </a>
               </Button>
