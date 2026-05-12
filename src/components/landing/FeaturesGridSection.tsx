@@ -8,7 +8,7 @@ const features = [
   { title: "Gastos Fixos", desc: "Organize contas recorrentes como aluguel, luz e internet.", img: "/assets/app-screenshots/gastos-fixos.png" },
   { title: "Assinaturas", desc: "Controle cobranças mensais que podem passar despercebidas.", img: "/assets/app-screenshots/assinatura.png" },
   { title: "Parcelamentos", desc: "Veja compras parceladas e o que ainda está comprometido.", img: "/assets/app-screenshots/parcelas.png" },
-  { title: "Vestiário", desc: "Ajuste perfil, preferências e configurações do app.", img: "/assets/app-screenshots/vestiario.png" },
+  { title: "Insights", desc: "Receba leituras simples para entender seus gastos e decisões no mês.", img: "/assets/app-screenshots/vestiario.png" },
 ];
 
 export const FeaturesGridSection = () => {
