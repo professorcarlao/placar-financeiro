@@ -3,6 +3,7 @@ import carlao from "@/assets/professor-carlao.png";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { trackCtaClick } from "@/lib/analytics";
 
 const links = [
   { href: "#como-funciona", label: "Como funciona" },
@@ -66,14 +67,10 @@ export const Header = () => {
             className="rounded-full font-bold shadow-apito transition-transform hover:scale-105 active:scale-95 h-10 px-4 text-sm shrink-0"
           >
             <a 
-              href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=header_criar_conta"
-              onClick={() => {
-                if (window.gtag) {
-                  window.gtag('event', 'lp_cta_click', {
-                    'cta_location': 'header_criar_conta',
-                    'destination': 'app_signup'
-                  });
-                }
+              href="https://app.financasemcampo.com.br/signup"
+              onClick={(e) => {
+                e.preventDefault();
+                trackCtaClick('header', 'Criar conta grátis');
               }}
             >
               <span className="sm:hidden">Criar conta</span>
@@ -84,4 +81,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
+};

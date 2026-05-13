@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Wallet, CreditCard, RefreshCcw, Calendar, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ProblemIllustration } from "./ProblemIllustration";
+import { trackCtaClick } from "@/lib/analytics";
 
 const pains = [
   {
@@ -90,14 +91,10 @@ export const ProblemSection = () => {
             className="h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:w-auto sm:px-12"
           >
             <a 
-              href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=section_criar_conta"
-              onClick={() => {
-                if (window.gtag) {
-                  window.gtag('event', 'lp_cta_click', {
-                    'cta_location': 'problem_section_cta',
-                    'destination': 'app_signup'
-                  });
-                }
+              href="https://app.financasemcampo.com.br/signup"
+              onClick={(e) => {
+                e.preventDefault();
+                trackCtaClick('problem_section', 'Quero ver meu placar');
               }}
             >
               Quero ver meu placar
@@ -108,4 +105,4 @@ export const ProblemSection = () => {
       </div>
     </section>
   );
-};
+};

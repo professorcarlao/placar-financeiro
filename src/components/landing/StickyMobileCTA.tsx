@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { trackCtaClick } from "@/lib/analytics";
 
 export const StickyMobileCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,15 +35,11 @@ export const StickyMobileCTA = () => {
         </div>
         <Button asChild variant="apito" className="h-[44px] rounded-full px-5 text-[11px] font-black uppercase shadow-lg shadow-apito/20 shrink-0">
           <a 
-            href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=sticky_mobile_criar_conta" 
+            href="https://app.financasemcampo.com.br/signup" 
             className="whitespace-nowrap"
-            onClick={() => {
-              if (window.gtag) {
-                window.gtag('event', 'lp_cta_click', {
-                  'cta_location': 'sticky_mobile_cta',
-                  'destination': 'app_signup'
-                });
-              }
+            onClick={(e) => {
+              e.preventDefault();
+              trackCtaClick('sticky_mobile', 'Ver meu placar grátis');
             }}
           >
             Ver meu placar grátis

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, UserPlus, Zap } from "lucide-react";
+import { trackCtaClick } from "@/lib/analytics";
 
 const benefits = [
   { icon: UserPlus, text: "Crie sua conta" },
@@ -36,7 +37,13 @@ export const ActivationSection = () => {
 
           <div className="mt-10 flex flex-col items-center gap-5 sm:mt-16 sm:gap-6">
             <Button asChild variant="apito" className="h-12 w-full max-w-[320px] mx-auto rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-20 sm:px-20 sm:text-xl sm:w-auto">
-              <a href="https://app.financasemcampo.com.br/signup?utm_source=lp&utm_medium=cta&utm_campaign=landing_page&utm_content=section_criar_conta">
+              <a 
+                href="https://app.financasemcampo.com.br/signup"
+                onClick={(e) => {
+                  e.preventDefault();
+                  trackCtaClick('activation_section', 'Criar minha conta grátis');
+                }}
+              >
                 Criar minha conta grátis
               </a>
             </Button>
