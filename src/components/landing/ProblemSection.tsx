@@ -42,7 +42,7 @@ export const ProblemSection = () => {
         <div className="mx-auto max-w-[320px] text-center mb-10 sm:mb-20 sm:max-w-4xl">
           <h2 className="font-display text-4xl leading-none sm:text-5xl lg:text-6xl text-center sm:leading-tight">
             <span className="block text-campo uppercase">O dinheiro entra.</span>
-            <span className="block text-cartao-vermelho uppercase">O mês escapa sem você perceber.</span>
+            <span className="block text-cartao-vermelho uppercase">E some antes do fim do mês.</span>
           </h2>
           <p className="mt-5 text-base leading-7 font-semibold text-campo/60 sm:mt-8 sm:text-base lg:text-xl">
             Gastos pequenos, fatura, assinaturas e parcelas vão se acumulando. Quando você percebe, já não sabe para onde foi o dinheiro nem quanto ainda pode gastar no mês.
