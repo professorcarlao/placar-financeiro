@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { PlayCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { PhoneFrame } from "./PhoneFrame";
+import { trackCtaClick } from "@/lib/analytics";
 
 export const Hero = () => {
   return (
@@ -53,10 +54,20 @@ export const Hero = () => {
 
             {/* CTA Row */}
             <div className="mt-10 flex flex-col items-center gap-3 w-full max-w-[320px] mx-auto sm:flex-row sm:max-w-none">
-              <Button asChild variant="campo-outline" className="h-12 w-full rounded-full px-5 text-base font-black transition-all hover:scale-105 sm:h-16 sm:px-10 sm:text-base sm:w-auto opacity-70 hover:opacity-100">
-                <a href="#como-funciona">
-                  <PlayCircle className="mr-3 h-5 w-5 text-apito" />
-                  Ver como funciona
+              <Button 
+                asChild 
+                variant="apito" 
+                className="h-12 w-full rounded-full px-5 text-base font-black shadow-apito transition-all hover:scale-105 active:scale-95 sm:h-16 sm:px-12 sm:text-lg sm:w-auto"
+              >
+                <a 
+                  href="https://app.financasemcampo.com.br/signup"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    trackCtaClick('hero', 'Criar conta grátis');
+                  }}
+                >
+                  Criar conta grátis
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
             </div>
